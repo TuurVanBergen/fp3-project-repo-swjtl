@@ -65,6 +65,7 @@ header {
 	margin-top: 100px;
 	display: flex;
 	justify-content: space-around;
+	color: #f6d4ac;
 }
 
 .carousel-title {
@@ -78,6 +79,7 @@ header {
 
 .carousel-title h2 {
 	margin: 0;
+	font-size: 43px;
 }
 .title {
 	text-align: center;
@@ -103,7 +105,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 70%;
+	width: 60%;
 	overflow: hidden;
 	position: relative;
 	transition: transform 0.3s ease-in-out;
@@ -138,7 +140,7 @@ header {
 }
 
 .carousel img {
-	max-width: 100%;
+	max-width: 75%;
 	max-height: 100%;
 	object-fit: contain;
 }
@@ -157,6 +159,10 @@ header {
 .carousel-prev {
 	left: -30px;
 	color: #380022;
+}
+.carousel-prev img,
+.carousel-next img{
+	width: 15%;
 }
 
 .carousel-next {
