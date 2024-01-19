@@ -1,0 +1,193 @@
+body {
+	margin: 0;
+	font-family: "helvetica";
+	src: url("./helvetica\ font/") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#centuryMenu {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+#filterBackground {
+	width: 50%;
+	background-color: #380022;
+	transform: rotate(25deg) translateX(-43%) translateY(-15vh);
+	transform-origin: center;
+	height: 130vh;
+	z-index: 7;
+	padding-left: 0%;
+}
+
+#title {
+	color: #f6d4ac;
+	font-size: 6vh;
+	transform: rotate(-25deg) translateX(-5%) translateY(60vh);
+	transform-origin: center;
+}
+
+#homeBtn {
+	display: inline-block;
+	background-color: #ce0236;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transform: rotate(-25deg) translateX(50%) translateY(90vh);
+	transform-origin: center;
+	text-decoration: none;
+}
+
+.century {
+	transform-origin: center;
+	height: 150vh;
+	width: 20%;
+	cursor: pointer;
+}
+
+.century h1 {
+	color: #390022;
+	font-size: 12vh;
+	transform-origin: center;
+	transform: rotate(-25deg) translateX(-110%) translateY(60vh);
+}
+
+.century h3 {
+	color: #390022;
+	font-size: 4vh;
+	transform-origin: center;
+	font-weight: 700;
+	transform: rotate(-25deg) translateX(-17%) translateY(39vh);
+}
+
+#fifteenth {
+	background-color: #ffcbea;
+	transform: rotate(25deg) translateY(-20vh) translateX(-115%);
+	z-index: 6;
+}
+
+#sixteenth {
+	background-color: #ce7cad;
+	transform: rotate(25deg) translateY(-20vh) translateX(-106%);
+	z-index: 5;
+}
+
+#seventeenth {
+	background-color: #a0437b;
+	transform: rotate(25deg) translateY(-20vh) translateX(-97%);
+	z-index: 4;
+}
+
+#eightteenth {
+	background-color: #8e2765;
+	transform: rotate(25deg) translateY(-20vh) translateX(-88%);
+	z-index: 3;
+}
+
+#nineteenth {
+	background-color: #7e1353;
+	transform: rotate(25deg) translateY(-20vh) translateX(-79%);
+	z-index: 2;
+}
+
+#twentyth {
+	background-color: #650a41;
+	transform: rotate(25deg) translateY(-20vh) translateX(-70%);
+	z-index: 1;
+}
+
+#twentyfirst {
+	background-color: #390022;
+	transform: rotate(25deg) translateY(-20vh) translateX(-61%);
+	z-index: 0;
+}
+
+#nineteenth h1,
+#nineteenth h3,
+#twentyth h1,
+#twentyth h3,
+#twentyfirst h1,
+#twentyfirst h3 {
+	color: #ffcbea;
+}
+
+#centuriesBtn {
+	position: absolute;
+	display: none;
+	background-color: #ce0236;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	z-index: 10;
+	margin-left: 90%;
+	margin-top: -95vh;
+}
+
+#spacing {
+	width: 100%;
+	height: 80vh;
+	margin-top: -130vh;
+}
+
+#centuryInformation {
+	position: absolute;
+	display: none;
+	background-color: white;
+	width: 100%;
+	height: 100vh;
+	z-index: 8;
+	color: #380022;
+}
+
+#centuryInformation h2 {
+	font-size: 6vh;
+	font-family: "courier-std", monospace;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.year {
+	width: 10%;
+	margin-left: 5%;
+	text-align: center;
+	height: min-content;
+}
+
+.event {
+	margin-left: 10%;
+	padding-left: 3%;
+	height: min-content;
+	border-left: 3px solid #380022;
+}
+
+.event h2 {
+	margin-bottom: 0;
+}
+
+.event h4 {
+	margin-top: 0;
+}
+
+#Drottningholm {
+	cursor: pointer;
+}
+
+#info {
+	display: none;
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	height: 100vh;
+	z-index: 9;
+	color: #380022;
+}
+
+#info h2 {
+	font-size: 6vh;
+	font-weight: 700;
+	font-style: normal;
+}
