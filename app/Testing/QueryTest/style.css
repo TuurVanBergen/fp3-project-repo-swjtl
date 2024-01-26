@@ -1,0 +1,70 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#title {
+    display: flex;
+        flex-wrap: nowrap;
+}
+
+#title > * {
+    width: 50%;
+}
+
+.container {
+    width: 400px;
+    height: 115px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: red 2px dotted;
+}
+
+#section > p {
+    font-size: large;
+    text-align: center;
+    background-color: rgba(169, 169, 169, 0.378);
+    width: 400px;
+    height: 80px;
+    width: 45%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    border: 2px solid black;
+}
+
+.info  {
+    display: flex;
+}
+
+
+#fieldName{
+    background-color:rgba(128, 255, 0, 0.4) ;
+    
+    order: 1;
+}
+
+#fieldValue {
+
+    order: 2;
+    
+
+}
+
+#linkedImg{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+}
+
+#pageLink {
+    text-decoration: none;
+    word-break: break-all;
+    color: black;
+    width: fit-content;
+    font-size: small;
+}

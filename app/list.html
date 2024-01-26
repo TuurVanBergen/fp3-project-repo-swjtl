@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>List</title>
+		<link rel="stylesheet" href="list.css" />
+        <link rel="stylesheet" href="dropdown.css">
+        <script src="dropdown.js"></script>
+	</head>
+	<body>
+        <div class="wrapper-header">
+            <header>
+                <div class="logo">
+                    <a href="./index.html"><img src="./images/logo.svg" alt="" srcset="" /></a>
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li id="selected">
+                            <a href="list.html">List</a>
+                        </li>
+                        <li>
+                            <a href="timeline.html">Timeline</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="searchBar">
+                    <input id="searchBar" placeholder="Search... &#x1F50D;" type="text" />
+                </div>
+            </header>
+        </div>
+		
+		<div id="titleBackground"></div>
+		<div id="titleName">
+			<h2>List</h2>
+		</div>
+		<div class="wrapper">
+            <!--https://www.w3schools.com/howto/howto_js_filter_dropdown.asp -->
+            <div class="filter">
+                <div class="dropdown">
+                    <button onclick="FilterCategory()" class="dropbtn">Category         <strong>&#8744;</strong></button>
+                    <div id="dropdownCategory" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="inputCategory" onkeyup="filterFunction()">
+                      <a href="#">Person</a>
+                      <a href="#">Theatre</a>
+                      <a href="#">Event</a>
+                      <a href="#">Gear</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button onclick="FilterYear()" class="dropbtn">Year         <strong>&#8744;</strong></button>
+                    <div id="dropdownYear" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="inputYear" onkeyup="filterFunction()">
+                      <a href="#">1400-1500</a>
+                      <a href="#">1500-1600</a>
+                      <a href="#">1600-1700</a>
+                      <a href="#">1700-1800</a>
+                      <a href="#">1800-1900</a>
+                      <a href="#">1900-2000</a>
+                      <a href="#">2000-2100</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button onclick="Sort()" class="dropbtn">Sort         <strong>&#8744;</strong></button>
+                    <div id="dropdownSort" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="inputSort" onkeyup="filterFunction()">
+                      <a href="#">A-Z</a>
+                      <a href="#">Z-A</a>
+                      <a href="#">Recommended</a>
+                    </div>
+                  </div>
+            </div>
+			<div class="container">
+				<div class="box">
+					<img src="/images/DrottningholmPalace.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/theatreBerlin.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/Intersection 1.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/Fresnel-lights-scaled.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/theatreBerlin.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/Fresnel-lights-scaled.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/theatreBerlin.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/Fresnel-lights-scaled.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/theatreBerlin.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+				<div class="box">
+					<img src="./images/Fresnel-lights-scaled.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+                <div class="box">
+					<img src="./images/theatreBerlin.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+                <div class="box">
+					<img src="./images/Fresnel-lights-scaled.png" alt="" />
+					<h3>Friedrichstadt-Palast Berlin</h3>
+					<p>Theatre in Berlin since 1873</p>
+					<a href="objectInfo.html" id="button">More</a>
+				</div>
+			</div>
+		</div>
+        <footer class="footer">
+            <div class="logo">
+                <a href="#"><img src="./images/logo_canon.png" alt="Homepage"></a>
+                <p> ©Royal Institute for Theatre, Cinema and Sound 2024</p>
+            </div>
+            <div class="social-media">
+                <a href="social-media-link" href="#"><img src="./images/socials.png" alt="Social Media"></a>
+                </a>
+            </div>
+            <div class="contact-info">
+                <p>ritcs@ehb.be</p>
+                <p>Delaunoystraat 58, 1080 Sint-Jans-Molenbeek</p>
+                <p>+32 2 507 14 11</p>
+            </div>
+        </footer>
+	</body>
+</html>

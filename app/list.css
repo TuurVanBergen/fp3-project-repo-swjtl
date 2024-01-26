@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+@import url("https://use.typekit.net/zrl0ajt.css");
+p {
+	font-family: "acumin-pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0 auto;
+	color: #f6d4ac;
+	width: 100%;
+}
+
+header {
+	z-index: 1000;
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navigation {
+	z-index: 2;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 65%;
+	margin-top: 0px;
+	/* margin-left: 33.65%; */
+}
+.navigation a {
+	text-decoration: none;
+	color: #390022;
+}
+.navigation li {
+	float: right;
+	margin-right: 50px;
+	list-style-type: none;
+}
+
+#searchBar {
+	border-radius: 17px;
+	border-width: 1px;
+	padding: 7px;
+}
+
+#titleBackground {
+	position: relative;
+	background-color: #390022;
+	transform: rotate(-45deg) translateX(-25%) translateY(-40vh);
+	transform-origin: center;
+	width: 45%;
+	height: 40vh;
+	z-index: 0;
+}
+
+#titleName {
+	z-index: 1;
+	position: absolute;
+	margin-top: -40vh;
+	margin-left: 2.5%;
+}
+
+#titleName h2 {
+	color: #efcca6;
+	font-size: 6vh;
+}
+
+#selected {
+	border-bottom: #ce0236 solid 2px;
+}
+
+.container {
+	width: 100%;
+	margin: 0px auto;
+	columns: 4;
+	column-gap: 30px;
+}
+.box {
+	width: 235px;
+	padding: 30px;
+	background-color: #380022;
+	margin-bottom: 10px;
+	break-inside: avoid;
+	border-radius: 10px;
+}
+.box img {
+	width: 100%;
+	height: 170px;
+	object-fit: contain;
+}
+#button {
+	color: #f6d4ac;
+	background-color: #ce0236;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 10px;
+}
+.wrapper {
+	width: 80%;
+	margin: 0px auto;
+}
+.wrapper h3 {
+	font-size: 18px;
+	width: 100%;
+	margin-bottom: 1px;
+	margin-top: 0;
+}
+.wrapper p {
+	font-size: 15px;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.wrapper-header {
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 22.68px;
+}
+.logo img {
+	width: 200px;
+}
+.filter {
+	width: 100%;
+	display: flex;
+	justify-content: right;
+	margin-bottom: 2%;
+	margin-top: -250px;
+}
+/*footer*/
+footer {
+	margin-top: 100px;
+	background-color: #ce1644;
+	color: white;
+	padding: 3.5%;
+	text-align: center;
+	position: relative;
+}
+.logo {
+	display: inline-block;
+}
+
+.logo img {
+	max-width: 200px;
+}
+.contact-info {
+	position: absolute;
+	left: 20px;
+	top: 22.5%;
+	text-align: left;
+}
+.social-media {
+	position: absolute;
+	right: 20px;
+	top: 40%;
+}
+.social-media img {
+	width: 150px;
+	padding-left: 10px;
+}

@@ -1,0 +1,175 @@
+body{
+    background-color: white;
+    color: #390022;
+}
+#titleBackground {
+    position: relative;
+    background-color: #390022;
+    transform: rotate(-45deg) translateX(-25%) translateY(-40vh);
+    transform-origin: center;
+    width: 50%;
+    height: 50vh;
+    z-index: 0;
+}
+#titleName img{
+    width: 130%;
+}
+#titleName{
+    z-index: 1;
+    position: absolute;
+    margin-top: -390px;
+    margin-left: 2%;
+}
+
+/*navigation*/
+header {
+	z-index: 1000;
+	position: relative;
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin: -20% 0 0 0;
+}
+.logo img{
+    width: 90%;
+    margin-left: -20%;
+}
+.navigation {
+	z-index: 2;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 65%;
+	margin-top: 0px;
+}
+.navigation a {
+	text-decoration: none;
+	color: #390022;
+}
+.navigation li {
+	float: right;
+
+	margin-right: 50px;
+	list-style-type: none;
+}
+
+.searchBar {
+	display: flex;
+	justify-content: right;
+	margin-top: -36px;
+}
+#searchBar {
+	border-radius: 17px;
+	border-width: 1px;
+	padding: 7px;
+}
+#titleBackground {
+	position: relative;
+	background-color: #390022;
+	transform: rotate(-45deg) translateX(-25%) translateY(-40vh);
+	transform-origin: center;
+	width: 45%;
+	height: 40vh;
+	z-index: 0;
+}
+/*content*/
+h1{
+    font-size: 100px;
+}
+.allInfoText h2{
+    margin-top: -10%;
+    font-size: 56px;
+}
+.basicInfoText h4{
+    margin-top: -7%;
+    font-size: 20px;
+}
+.allInfoText h3{
+    margin-top: 10%;
+    font-size: 40px;
+}
+.allInfoText p{
+    margin-top: -2%;
+}
+.basicInfoText{
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.allInfoText{
+    z-index: 2;
+    position: absolute;
+    width: 35%;
+    margin-top: 0px;
+    margin-left: 22%;
+    padding-left: 3%;
+    border-left: 2px solid #390022;
+    height: 100%;
+}
+.image{
+    width: 30%;
+    margin-top: -33.33%;
+    margin-left: 65%;
+}
+.image img {
+    width: 100%;
+}
+.allListItems{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+.relatedItems{
+    margin-top: 65%; 
+}
+.relatedItems h2{
+    font-size: 40px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.listItem1, .listItem2, .listItem3, .listItem4{
+    background-color: #390022;
+    color:#EFCCA6;
+    width: 15%;
+    margin-left: 5%;
+    padding: 0.5%;
+    height: min-content;
+}
+.listItem1 img, .listItem2 img, .listItem3 img, .listItem4 img{
+    width: 90%;
+    padding: 5%;
+    padding-bottom: 0%;
+}
+.itemText{
+    padding-left: 5%;
+}
+.itemText a{
+    text-decoration: none;
+    color: #EFCCA6;
+}
+.itemText h4{
+    margin-bottom: -5%;
+}
+.button{
+    color: white;
+    background-color: #ce0236;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+.buttonBack{
+    margin-left: 7%;
+    margin-top: -50%;
+}
+.footer{
+    margin-top: 50%;
+}
+.social-media img{
+    width: 50px;
+}

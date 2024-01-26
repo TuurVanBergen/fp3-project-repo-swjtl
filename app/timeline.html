@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="timeline.css" />
+		<link rel="stylesheet" href="dropdown.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="bolPlacement.js" defer></script>
+		<script src="bolHover.js" defer></script>
+		<script src="dropdown.js" defer></script>
+		
+	</head>
+	<body>
+		<div class="wrapper-header">
+            <header>
+                <div class="logo">
+                    <a href="./index.html"><img src="./images/logo.svg" alt="" srcset="" /></a>
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li>
+                            <a href="list.html">List</a>
+                        </li>
+                        <li id="selected">
+                            <a href="timeline.html">Timeline</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="searchBar">
+                    <input id="searchBar" placeholder="Search...                &#x1F50D;" type="text" />
+                </div>
+            </header>
+        </div>
+		<div id="titleBackground"></div>
+		<div id="titleName">
+			<h2>Timeline</h2>
+		</div>
+
+		<div id="tableTitle">
+			<h2>Timeline of Theatre History</h2>
+		</div>
+
+		<div class="filter">
+			<div class="dropdown">
+				<button onclick="FilterYear()" class="dropbtn">Year         <strong>&#8744;</strong></button>
+				<div id="dropdownYear" class="dropdown-content">
+					<input type="text" placeholder="Search.." id="inputYear" onkeyup="filterFunction()">
+					<a href="#">1400-1500</a>
+					<a href="#">1500-1600</a>
+					<a href="#">1600-1700</a>
+					<a href="#">1700-1800</a>
+					<a href="#">1800-1900</a>
+					<a href="#">1900-2000</a>
+					<a href="#">2000-2100</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button onclick="Sort()" class="dropbtn">Sort         <strong>&#8744;</strong></button>
+				<div id="dropdownSort" class="dropdown-content">
+					<a href="#">Peson</a>
+					<a href="#">Theater</a>
+					<a href="#">Gear</a>
+					<a href="#">Events</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="timeline-container">
+			<div class="scrollbar" id="style-3">
+				<div class="force-overflow"></div>
+			</div>
+			<table id="timeline">
+				<tr id="yearRow">
+					<td></td>
+					<td></td>
+					<th>1200</th>
+					<th>1300</th>
+					<th>1400</th>
+					<th>1500</th>
+					<th>1600</th>
+					<th>1700</th>
+					<th>1800</th>
+					<th>1900</th>
+					<th>2000</th>
+					<th>2100</th>
+				</tr>
+				<tr id="padding_yearRow">
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+					<th id="Person" class="underline">Person</th>
+					<th><img class="Icon" src="images/person_icon.png" alt=""></th>
+					<td colspan="10">
+						<div id="_1stRow" class="bollen-grid">
+							<!--1ste row -->
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th id="Theater" class="underline">Theatre</th>
+					<th><img class="Icon" src="images/theater_icon.png" alt=""></th>
+					<td colspan="10">
+						<div id="_2thRow" class="bollen-grid">
+							<!--1ste row -->
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th id="Gear" class="underline">Gear</th>
+					<th><img class="Icon" src="images/gear_icon.png" alt=""></th>
+					<td colspan="10">
+						<div id="_3thRow" class="bollen-grid">
+							<!--1ste row -->
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th id="Events" class="underline">Events</th>
+					<th><img class="Icon" src="images/events-icon.png" alt=""></th>
+					<td colspan="10">
+						<div id="_4thRow" class="bollen-grid">
+							<!--1ste row -->
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+							<div class="grid-tile"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+        <div id="hoverInfoContainer">
+            <!-- <div id="hoverInfo">
+                <img id="hoverImg" src="./images/theatreBerlin.png" alt="" />
+                <div id="hoverInfoList">
+                    <h3 id="titleHover">Royal theater of London</h3>
+                    <p id="hoverYear">1423</p>
+                    <p id="hoverType">Theater</p>
+                    <a href="#">More</a>
+                </div>
+            </div> -->
+        </div>
+		<input id="rowInput" type="number" />
+		<input id="bolInput" type="number" />
+		<div id="testBtn">test btn</div>
+
+		<section id="footer">
+			<h1 class="title">How to use our timeline</h1>
+			<div class="grid-container">
+				<div id="leftRectangle" class="rectangle">
+					<div id="leftGif" class="hover-gif"></div>
+					<div class="content">
+						<h2>Search Functions</h2>
+						<p>Find specifics using the search bar. Directly access information within the expansive timeline. Tailor your exploration. Navigate aspects of theatre and pinpoint specific years for a personalized journey.</p>
+					</div>
+				</div>
+
+				<div id="centerRectangle" class="rectangle">
+					<div id="centerGif" class="hover-gif"></div>
+					<div class="whiteText content">
+						<h2>Hover Over Circles</h2>
+						<p>Quickly explore events, personalities, or themes by hovering over circles. Let the visual guide you through key points in theatre history.</p>
+					</div>
+				</div>
+
+				<div id="rightRectangle" class="rectangle">
+					<div id="rightGif" class="hover-gif"></div>
+					<div class="content">
+						<h2>Click for more info</h2>
+						<p>Dive deeper into the narrative by clicking within a circle. Access a page with comprehensive details and resources for an immersive experience.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="logo">
+			<a href="#"><img src="./images/logo_canon.png" alt="Homepage"></a>
+			<p> ©Royal Institute for Theatre, Cinema and Sound 2024</p>
+			</div>
+			<div class="social-media">
+			<a href="social-media-link" href="#"><img src="./images/socials.png" alt="Social Media"></a>
+			</a>
+			</div>
+			<div class="contact-info">
+			<p>ritcs@ehb.be</p>
+			<p>Delaunoystraat 58, 1080 Sint-Jans-Molenbeek</p>
+			<p>+32 2 507 14 11</p>
+			</div>
+			</footer>
+	</body>
+</html>
