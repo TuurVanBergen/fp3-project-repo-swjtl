@@ -276,7 +276,7 @@ margin: 10px auto;
  
 .wrapper-white {
  margin: 0 auto;
- 
+ width: 100%;
  background-color: white;
  display: flex;
  flex-wrap: wrap;
@@ -286,8 +286,13 @@ footer {
     background-color: #ce1644;
     color: white;
     padding: 3.5%;
+height: 100%;
     text-align: center;
     position: relative;
+}
+.contact-info p{
+    width: 60%;
+    margin-bottom: 0;
 }
 .logo {
     display: inline-block;
@@ -371,25 +376,35 @@ footer {
 font-size: 14px;
        }
        .footer .logo img {
-        max-width: 120px; /* Adjust the max-width as needed */
+        max-width: 120px;
     }
 
     .footer .social-media img {
-        max-width: 100px; /* Adjust the max-width as needed */
+        max-width: 100px;
     }
 }
 
 @media only screen and (max-width: 850px) {
     .footer .logo img {
-        max-width: 100px; /* Adjust the max-width as needed */
+        max-width: 100px;
     }
 
     .footer .social-media img {
-        max-width: 80px; /* Adjust the max-width as needed */
+        max-width: 80px;
     }
-    .footer p{
+    .contact-info p{
         width: 70%;
                }
+               .logo{
+                text-align: center;
+               }
+    .logo p{
+font-size: 12px;
+
+    }
+    .footer{
+        padding-bottom: 10%;
+    }
         
     .wrapper h1{
       font-size: 47px;
@@ -472,6 +487,16 @@ margin-bottom: 0px;
     .mobile-carousel{
         width: 100%;
     }
+    .contact-info,
+    .social-media {
+        position: static;
+        text-align: center;
+        transform: translateX(0%);
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
 }
 @media only screen and (max-width: 454px) {
 
@@ -542,3 +567,26 @@ margin-bottom: 0px;
         display: none;
     }
 }
+@media only screen and (min-width: 1700px) {
+    .wrapper-1{
+            width: 1700px;
+    }
+    .footer{
+        margin: 0 auto;
+        width: 1600px;
+        padding: 3.5% 0;
+    }
+    .outer-footer{
+        width: 100%;
+        background-color: #ce1644  
+    }
+    .hero{
+        width: 1600px;
+        margin: 0 auto;
+    }
+    header{
+        width: 1600px;
+        margin: 0 auto;
+        margin-top: 22px;
+    }
+    }
