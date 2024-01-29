@@ -471,12 +471,19 @@ footer {
         text-decoration: none;
         padding: 10px 15px;
         border-radius: 10px;
-    } 
+    }
+    /* responsive navigation */
+    .navigation li{
+        font-size: 14px;
+    }
+    .navigation li{
+        margin-right: 30px;
+    }
+    .logo img{
+        width: 150px;
+    }
 }
 @media only screen and (max-width: 600px) {
-    header{
-        display: none;
-    }
     .footer p{
         width: 50%;
     }
@@ -517,6 +524,33 @@ footer {
     .social-media {
         margin-top: 20px;
     }
+    /* navigation */
+    .logo{
+        width: 50%;
+        text-align: left;
+    }
+    .logo img{
+        width: 125px;
+    }
+    header{
+        margin-top: 2.5%;
+        margin-right: 0;
+    }
+    .navigation li{
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    /* hero section */
+    .hero{
+        padding-top: 50px;
+    }
+    .hero p{
+        margin-bottom: 20px;
+    }
+    #button {
+        padding: 10px 17px;
+        font-size: 12px;
+    }
 }
 @media only screen and (max-width: 454px) {
     .wrapper h1{
@@ -528,7 +562,7 @@ footer {
         width: 110%;
     }        
     .hero{
-        padding-top: 75px;
+        padding-top: 25px;
     }
     .title h2{
         font-size: 20px;
@@ -536,11 +570,25 @@ footer {
     .mobile-carousel-img h4{
         font-size: 14px;
     }
+    /* navigation */
+    .logo img{
+        width: 100px;
+    }
+    header{
+        margin-top: 0;
+    }
+    .navigation li{
+        margin-right: 7px;
+        font-size: 10px;
+    }
+    .navigation{
+        width: 80%;
+        text-align: right;
+        margin-right: 11.148px;
+    }
+
 }
 @media only screen and (max-width: 600px) {
-    .navigation {
-        display: none;
-    }
     #searchBar {
         display: none;
     }
