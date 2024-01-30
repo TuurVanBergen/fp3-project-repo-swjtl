@@ -237,7 +237,7 @@ export async function getTheatreInfo(qCode) {
 					break;
 			}
 		}
-		console.log(currentObject);
+		// console.log(currentObject);
 		return currentObject;
 	} catch {
 		console.error("No Date Found", error);
