@@ -1,8 +1,9 @@
 import formatDate from "../../../Classes/formatDate.js";
 
-console.log("test");
+console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
 // let qCode = `Q31216`;
+// let qCode = `Q31755`;
 // let qCode = `Q21705`;
 // let qCode = `Q20576`;
 // let qCode = `Q123`;
@@ -18,6 +19,39 @@ console.log("test");
 // let qCode = `Q93`;
 
 // getAllInfo(qCode);
+// getAllPersonDates("Q22936");
+// returns only dateofbirth and dateofdeath of person
+export async function getPersonDate(qCode) {
+	let personDates = {
+		dateOfBirth: undefined,
+		dateOfDeath: undefined,
+		description: "",
+	};
+	try {
+		const response = await fetch(setUrl(qCode));
+		const data = await response.json();
+
+		let dateOfBirth = eval(
+			`data.entities.` + qCode + `.claims.P30[0].mainsnak.datavalue.value.time`
+		);
+		let dateOfDeath = eval(
+			`data.entities.` + qCode + `.claims.P31[0].mainsnak.datavalue.value.time`
+		);
+		let description = eval(`data.entities.` + qCode + `.descriptions.en.value`);
+		let dateString = new formatDate();
+		dateOfBirth = dateString.formatYear(dateOfBirth);
+
+		dateOfDeath = dateString.formatYear(dateOfDeath);
+
+		personDates.description = description;
+		personDates.dateOfBirth = dateOfBirth;
+		personDates.dateOfDeath = dateOfDeath;
+	} catch {
+		console.error("No Date Found");
+	}
+	console.log(personDates);
+	return personDates;
+}
 
 export async function getAllInfo(qCode) {
 	console.log(`fetching from ${qCode}`);
@@ -26,28 +60,29 @@ export async function getAllInfo(qCode) {
 		const response = await fetch(setUrl(qCode));
 		const data = await response.json();
 
-		let label = eval(`data.entities.` + qCode + `.labels.en.value`);
-		let description = eval(`data.entities.` + qCode + `.descriptions.en.value`);
+		let label;
+		let description;
 
-		console.log(label);
-		console.log(description);
-
-		// document.getElementById("label").innerText = label;
-		// document.getElementById("description").innerText = description;
+		if (
+			eval(`data.entities.` + qCode + `.labels.en.descriptions`) === undefined
+		) {
+			label = eval(`data.entities.` + qCode + `.labels.en.value`);
+			description = undefined;
+		} else {
+			label = eval(`data.entities.` + qCode + `.labels.en.value`);
+			description = eval(`data.entities.` + qCode + `.descriptions.en.value`);
+		}
 
 		// returns all properties linked to Q31216
 		let properties = Object.keys(eval(`data.entities.` + qCode + `.claims`));
-		// adds all info to currentObject
 
 		//Second api call
 		currentObject = await fetchInfo(properties, data, qCode);
+
 		currentObject.label = label;
-		currentObject.description = description;
-		// console.log(currentObject);
-		// document.getElementById("section").innerHTML = `<p>${toString(
-		// 	response2
-		// )}</p>`;
-		// console.log(currentObject);
+		if (!(description === undefined)) {
+			currentObject.description = description;
+		}
 	} catch (error) {
 		console.error("Error fetching the file:", error);
 	}
@@ -67,18 +102,6 @@ async function fetchInfo(properties, data, qCode) {
 		qCode = temp;
 		i++;
 
-		// console.log(`current containerNr :  ${i}`);
-		// console.log("Q code : " + qCode);
-		// console.log(`Property :  ` + property);
-
-		/*
-		document.getElementById("section").innerHTML += `
-		<div class="container" id="container${i}">${i}
-		
-		</div>
-		`;
-		*/
-
 		// adds properties to object;
 		if (property === "P2") {
 			// image
@@ -89,7 +112,7 @@ async function fetchInfo(properties, data, qCode) {
 				property +
 				`[0].mainsnak.datavalue.value`;
 
-			console.log(`Corresponding Q : ` + eval(currentProperty));
+			// console.log(`Corresponding Q : ` + eval(currentProperty));
 
 			currentObject.img = `http://commons.wikimedia.org/wiki/Special:FilePath/${eval(
 				`data.entities.` +
@@ -98,8 +121,6 @@ async function fetchInfo(properties, data, qCode) {
 					property +
 					`[0].mainsnak.datavalue.value`
 			)}`;
-
-			// document.getElementById(`container${i}`).innerHTML += `<p id="fieldValue" ><img id="linkedImg" src="${currentObject.img}"></img></p>`;
 		} else if (property === "P16") {
 			// Wikidata source
 			let currentProperty =
@@ -108,29 +129,10 @@ async function fetchInfo(properties, data, qCode) {
 				`.claims.` +
 				property +
 				`[0].mainsnak.datavalue.value`;
-			console.log(eval(currentProperty));
+
 			currentObject.wikiDataSource = `https://www.wikidata.org/wiki/${eval(
 				currentProperty
 			)}`;
-
-			/*
-			document.getElementById(
-				`container${i}`
-			).innerHTML += `<p id="fieldValue" ><a target="_blank" id="pageLink" href="https://www.wikidata.org/wiki/${eval(
-				`data.entities.` +
-					qCode +
-					`.claims.` +
-					property +
-					`[0].mainsnak.datavalue.value`
-			)}">https://www.wikidata.org/wiki/${eval(
-				`data.entities.` +
-					qCode +
-					`.claims.` +
-					property +
-					`[0].mainsnak.datavalue.value`
-			)}</a></p>`;
-
-			console.log(`Corresponding Q : ` + eval(currentProperty));*/
 		} else if (
 			property === "P111" ||
 			property === "P102" ||
@@ -145,7 +147,7 @@ async function fetchInfo(properties, data, qCode) {
 				property +
 				`[0].mainsnak.datavalue.value.time`;
 
-			console.log(eval(currentProperty));
+			// console.log(eval(currentProperty));
 			let info = new formatDate();
 			currentProperty = info.formatYear(eval(currentProperty));
 
@@ -189,13 +191,6 @@ async function fetchInfo(properties, data, qCode) {
 				property +
 				`[0].mainsnak.datavalue.value`;
 			currentObject.sourceUrl = eval(currentProperty);
-
-			/*
-			document.getElementById(
-				`container${i}`
-			).innerHTML += `<p id="fieldValue"><a target="_blank" id="pageLink" href="${eval(
-				currentProperty
-			)}">${eval(currentProperty)}</a></p>`;*/
 		} else if (property === "P164") {
 			// Adress
 			let currentProperty =
@@ -205,30 +200,19 @@ async function fetchInfo(properties, data, qCode) {
 				property +
 				`[0].mainsnak.datavalue.value`;
 			currentObject.adress = eval(currentProperty);
-
-			/*
-			document.getElementById(
-				`container${i}`
-			).innerHTML += `<p id="fieldValue">${eval(currentProperty)}</p>`;*/
 		}
 
 		// Defines the new Qcode for value fetch
 		qCode = eval(
 			`data.entities.${qCode}.claims.${property}[0].mainsnak.datavalue.value.id`
 		);
-		console.log("new Qcode : " + qCode);
+		// console.log("new Qcode : " + qCode);
 
 		// append Property value (general case)
 		await fetch(setUrl(property))
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(`Appending ${qCode} property to html  `);
-
 				let pName = eval(`data.entities.${property}.labels.en.value`);
-				/*
-				document.getElementById(
-					`container${i}`
-				).innerHTML += `<p id="fieldName">${pName}</p>`;*/
 			})
 			.catch((error) => console.error("Error fetching the file:", error));
 
@@ -237,7 +221,7 @@ async function fetchInfo(properties, data, qCode) {
 		await fetch(setUrl(qCode))
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(`Appending ${qCode} statement to html `);
+				// console.log(`Appending ${qCode} statement to html `);
 				let pValue = eval(`data.entities.${qCode}.labels.en.value`);
 
 				if (property === "P11") {
@@ -250,15 +234,8 @@ async function fetchInfo(properties, data, qCode) {
 					//subclass of
 					currentObject.subclassOf = pValue;
 				}
-				/*
-				document.getElementById(
-					`container${i}`
-				).innerHTML += `<p id="fieldValue">${pValue}</p>`;*/
 			})
 			.catch((error) => console.error("Error fetching the file:", error));
-
-		console.log("Finished " + property);
-		console.log("___________________________________");
 	}
 	// console.log(currentObject);
 	return currentObject;

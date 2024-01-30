@@ -1,76 +1,148 @@
 import formatDate from "../../../Classes/formatDate.js";
-import { getAllInfo } from "../QueryTest/script.js";
+import { getAllInfo, getPersonDate } from "../QueryTest/script.js";
 
 console.log("timeline test");
+
 let equiment = [];
-getEquipmentTimelineData();
-// displayinformation();
+let persons = [];
+let personQcodes = ["Q31755", "Q33985", "Q30628", "Q20679", "Q22453", "Q21163"];
 
-async function displayinformation() {
-	return await getAllInfo(`Q31216`);
-}
+let Qlist = ["Q20393", "Q31216", "Q21705", "Q20576", "Q123", "Q266", "Q8754"];
 
-let currentObject = await displayinformation();
+// await getPersonTimelineData();
 
-document.getElementById("objectMessage").innerHTML += `
-<p>${JSON.stringify(currentObject)}</p><br><br>
-`;
-
-// displayinformation(`Q21705`);
-// getAllInfo(`Q21705`);
-// getAllInfo(`Q8876`);
-// getAllInfo(`Q20576`);
-// getAllInfo(`Q123`);
-// getAllInfo(`Q266`);
-// getAllInfo(`Q8754`);
-// getAllInfo(`Q4251`);
-// getAllInfo(`Q12`);
-// getAllInfo(`Q577`);
-// getAllInfo(`Q8876`);
-// getAllInfo(`Q90`);
-// getAllInfo(`Q91`);
-// getAllInfo(`Q92`);
-// getAllInfo(`Q93`);
-
+// getEquipmentTimelineData();
 // console.log(equiment);
 
-// async function getPersonTimelineData() {
-// 	await fetch("http://127.0.0.1:5500/JSON/PersonsByOccupation.json")
-// 		.then((response) => response.json())
-// 		.then((data) => {
-// 			console.log(data);
+// getEventsTimelineData();
 
-// 			for (let info in data) {
-// 				if (!(data[info].start === undefined)) {
-// 					let dateString = new formatDate();
-// 					// console.log(data[date].start);
-// 					let startDate = dateString.formatTimelineDate(data[info].start);
-// 					let itemLabel = data[info].itemLabel;
-// 					let cardInfo = `${itemLabel} :  ${startDate}`;
-// 					equiment.push(cardInfo);
-// 					console.log(cardInfo);
-// 				}
-// 			}
-// 		})
-// 		.catch((error) => console.error("Error fetching the file:", error));
-// }
+getTheatresTimelineData();
+// need to do the same as persons. create new json file for all data
 
-async function getEquipmentTimelineData() {
-	await fetch("http://127.0.0.1:5500/JSON/equipment.json")
+// only use when needing all of the information. goes very slow for all fetches. is pretty fast for just one fetch
+async function displayinformation(qCode) {
+	// info is object
+	let info = await getAllInfo(qCode);
+
+	// values inside object
+	console.log(info.label);
+	let name = info.label;
+	if (!(info.dateOfBirth === undefined)) {
+		let dateOfBirth = info.dateOfBirth;
+		let dateOfDeath = info.dateOfDeath;
+		let currentObject = { dateOfBirth, dateOfDeath, qCode, name };
+
+		return currentObject;
+	} else if (!(info.firstUseDate === undefined)) {
+		let firstUseDate = info.firstUseDate;
+		let currentObject = { firstUseDate, qCode, name };
+
+		return currentObject;
+	}
+}
+
+// decide what data to use
+function getEventsTimelineData() {
+	fetch("http://127.0.0.1:5500/JSON/Events.json")
+		.then((response) => response.json())
+		.then((data) => {
+			console.log(data);
+			for (let i in data) {
+				if (data[i].pLabel === "Canon Event Label") {
+					console.log(data[i].itemLabel);
+				}
+			}
+			console.log("---------------------------------------------");
+			for (let i in data) {
+				if (data[i].pLabel === "point in time") {
+					console.log(data[i].itemLabel);
+				}
+			}
+
+			// let name = data[info].itemLabel;
+			// let date =
+		});
+}
+
+function getPersonTimelineData() {
+	fetch("http://127.0.0.1:5500/JSON/PersonsByOccupation.json")
 		.then((response) => response.json())
 		.then((data) => {
 			// console.log(data);
 
 			for (let info in data) {
+				let name = data[info].personLabel;
+
+				//returns last part of link (Q-code)
+				let qCode = data[info].person.lastIndexOf("Q");
+				qCode = data[info].person.substring(qCode);
+
+				// console.log(qCode);
+				let occupationLabel = data[info].occupationLabel;
+				let countryLabel = data[info].countryLabel;
+				let cardInfo = { name, qCode, occupationLabel, countryLabel };
+				persons.push(cardInfo);
+			}
+			// add birth and death data to persons objects
+			// returns birth an death of person with q code
+
+			addDatesToPersons();
+		})
+		.catch((error) => console.error("Error fetching the file:", error));
+}
+async function addDatesToPersons() {
+	for (let p in persons) {
+		let currentObject = await getPersonDate(persons[p].qCode);
+		console.log(currentObject.dateOfBirth);
+		console.log(currentObject.dateOfDeath);
+		console.log(currentObject.description);
+		persons[p].dateOfBirth = currentObject.dateOfBirth;
+		persons[p].dateOfDeath = currentObject.dateOfDeath;
+		persons[p].description = currentObject.description;
+		console.log(persons[p]);
+	}
+	console.log(persons); // Make Json file from persons
+	console.log(JSON.stringify(persons));
+	document.getElementById("jsonString").innerText = JSON.stringify(persons);
+}
+
+// gets all equipment with an identified date
+
+async function getEquipmentTimelineData() {
+	await fetch("http://127.0.0.1:5500/JSON/equipment.json")
+		.then((response) => response.json())
+		.then((data) => {
+			for (let info in data) {
 				if (!(data[info].start === undefined)) {
 					let dateString = new formatDate();
-					// console.log(data[date].start);
+
 					let startDate = dateString.formatTimelineDate(data[info].start);
-					let itemLabel = data[info].itemLabel;
-					let cardInfo = `${itemLabel} :  ${startDate}`;
-					equiment.push(cardInfo);
-					// console.log(cardInfo);
+					console.log(startDate);
+					let name = data[info].itemLabel;
+					let currentObject = { name, startDate };
+					console.log(data[info].item);
+					equiment.push(currentObject);
 				}
+			}
+			console.log(equiment);
+		})
+		.catch((error) => console.error("Error fetching the file:", error));
+}
+
+async function getTheatresTimelineData() {
+	await fetch("http://127.0.0.1:5500/JSON/Theatres.json")
+		.then((response) => response.json())
+		.then((data) => {
+			for (let info in data) {
+				let dateString = new formatDate();
+				let openingDate = dateString.formatTimelineDate(data[info].start);
+				console.log(openingDate);
+
+				let theatreName = data[info].itemLabel;
+
+				let location = data[info].itemLabel.lastIndexOf("[");
+				location = data[info].itemLabel.substring(itemLabel);
+				console.log(location);
 			}
 		})
 		.catch((error) => console.error("Error fetching the file:", error));

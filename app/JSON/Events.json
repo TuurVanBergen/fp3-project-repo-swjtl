@@ -1,0 +1,224 @@
+[
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q74",
+		"itemLabel": "Woodstock Festival",
+		"timeline_date": "1969-08-15T00:00:00Z",
+		"date_raw": "1969-08-15T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q74",
+		"itemLabel": "Woodstock Festival",
+		"timeline_date": "1969",
+		"date_raw": "1969-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q15382",
+		"itemLabel": "first radio transmission",
+		"timeline_date": "1894",
+		"date_raw": "1894-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q15382",
+		"itemLabel": "first radio transmission",
+		"timeline_date": "1895",
+		"date_raw": "1895-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30507",
+		"itemLabel": "Misteri d`Elx",
+		"timeline_date": "1523",
+		"date_raw": "1523-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Misterio%20de%20Elche%2002.jpg"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q30507",
+		"itemLabel": "Misteri d`Elx",
+		"timeline_date": "1523",
+		"date_raw": "1523-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Misterio%20de%20Elche%2002.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30516",
+		"itemLabel": "Passion Valenciennes",
+		"timeline_date": "1500-01-01T00:00:00Z",
+		"date_raw": "1500-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q30516",
+		"itemLabel": "Passion Valenciennes",
+		"timeline_date": "1547",
+		"date_raw": "1547-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30521",
+		"itemLabel": "First electric lighting in theatre",
+		"timeline_date": "1881",
+		"date_raw": "1881-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30522",
+		"itemLabel": "Electric lighting mandatory in German theatres",
+		"timeline_date": "1891",
+		"date_raw": "1891-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q30522",
+		"itemLabel": "Electric lighting mandatory in German theatres",
+		"timeline_date": "1891",
+		"date_raw": "1891-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30533",
+		"itemLabel": "Bregenzer Festspiele",
+		"timeline_date": "1946",
+		"date_raw": "1946-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q30533",
+		"itemLabel": "Bregenzer Festspiele",
+		"timeline_date": "1946",
+		"date_raw": "1946-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30537",
+		"itemLabel": "Glastonbury Festival",
+		"timeline_date": "1970",
+		"date_raw": "1970-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q30546",
+		"itemLabel": "Love Parade Disaster",
+		"timeline_date": "2010",
+		"date_raw": "2010-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q30546",
+		"itemLabel": "Love Parade Disaster",
+		"timeline_date": "2010",
+		"date_raw": "2010-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q30849",
+		"itemLabel": "PQ83",
+		"timeline_date": "1983",
+		"date_raw": "1983-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "End time",
+		"item": "http://canonbase.eu/entity/Q30849",
+		"itemLabel": "PQ83",
+		"timeline_date": "1983-07-06T00:00:00Z",
+		"date_raw": "1983-07-06T00:00:00Z"
+	},
+	{
+		"pLabel": "start time",
+		"item": "http://canonbase.eu/entity/Q30849",
+		"itemLabel": "PQ83",
+		"timeline_date": "1983-06-13T00:00:00Z",
+		"date_raw": "1983-06-13T00:00:00Z"
+	},
+	{
+		"pLabel": "End time",
+		"item": "http://canonbase.eu/entity/Q30849",
+		"itemLabel": "PQ83",
+		"timeline_date": "1983-07-03T00:00:00Z",
+		"date_raw": "1983-07-03T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q32811",
+		"itemLabel": "Schwabe-Hasait Cyclorama and Lighting System UK Launch",
+		"timeline_date": "1923-03-08T00:00:00Z",
+		"date_raw": "1923-03-08T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q33068",
+		"itemLabel": "Clara Webster's muslin dress caught fire",
+		"timeline_date": "1844-12-17T00:00:00Z",
+		"date_raw": "1844-12-17T00:00:00Z"
+	},
+	{
+		"pLabel": "start time",
+		"item": "http://canonbase.eu/entity/Q33920",
+		"itemLabel": "PQ 2023",
+		"timeline_date": "2023-06-08T00:00:00Z",
+		"date_raw": "2023-06-08T00:00:00Z"
+	},
+	{
+		"pLabel": "End time",
+		"item": "http://canonbase.eu/entity/Q33920",
+		"itemLabel": "PQ 2023",
+		"timeline_date": "2023-06-18T00:00:00Z",
+		"date_raw": "2023-06-18T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q505",
+		"itemLabel": "First semiconductor",
+		"timeline_date": "1874",
+		"date_raw": "1874-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q507",
+		"itemLabel": "First light bulb",
+		"timeline_date": "1880",
+		"date_raw": "1880-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q515",
+		"itemLabel": "first steam engine",
+		"timeline_date": "1769",
+		"date_raw": "1769-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "point in time",
+		"item": "http://canonbase.eu/entity/Q598",
+		"itemLabel": "accident in the Bazar de la Charité",
+		"timeline_date": "1897",
+		"date_raw": "1897-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q696",
+		"itemLabel": "Ringtheater [Vienna, AT]",
+		"timeline_date": "1874-01-17T00:00:00Z",
+		"date_raw": "1874-01-17T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Ringtheater%20vor1881.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q696",
+		"itemLabel": "Ringtheater [Vienna, AT]",
+		"timeline_date": "1881-12-08T00:00:00Z",
+		"date_raw": "1881-12-08T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Ringtheater%20vor1881.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q696",
+		"itemLabel": "Ringtheater [Vienna, AT]",
+		"timeline_date": "1881",
+		"date_raw": "1881-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Ringtheater%20vor1881.jpg"
+	}
+]

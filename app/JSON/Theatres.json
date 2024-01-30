@@ -1,0 +1,827 @@
+[
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1993-03-16T00:00:00Z",
+		"date_raw": "1993-03-16T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "Building date",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1827",
+		"date_raw": "1827-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1865",
+		"date_raw": "1865-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1904",
+		"date_raw": "1904-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "closure date",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1980",
+		"date_raw": "1980-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1834",
+		"date_raw": "1834-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "restoration date",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1991",
+		"date_raw": "1991-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "Address",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1853",
+		"date_raw": "1853-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1834",
+		"date_raw": "1834-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "significant date",
+		"item": "http://canonbase.eu/entity/Q133",
+		"itemLabel": "Bourla theatre [Antwerp, BE]",
+		"timeline_date": "1958",
+		"date_raw": "1958-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Antwerpen%20V7%20%28228128289%29.jpeg"
+	},
+	{
+		"pLabel": "discovery date",
+		"item": "http://canonbase.eu/entity/Q34",
+		"itemLabel": "Drottningholm Palace Theatre (SE) [Stockholm]",
+		"timeline_date": "1921",
+		"date_raw": "1921-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Drottlingham2.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q34",
+		"itemLabel": "Drottningholm Palace Theatre (SE) [Stockholm]",
+		"timeline_date": "1673",
+		"date_raw": "1673-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Drottlingham2.jpg"
+	},
+	{
+		"pLabel": "Building date",
+		"item": "http://canonbase.eu/entity/Q34",
+		"itemLabel": "Drottningholm Palace Theatre (SE) [Stockholm]",
+		"timeline_date": "1766",
+		"date_raw": "1766-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Drottlingham2.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q34",
+		"itemLabel": "Drottningholm Palace Theatre (SE) [Stockholm]",
+		"timeline_date": "1766",
+		"date_raw": "1766-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Drottlingham2.jpg"
+	},
+	{
+		"pLabel": "closure date",
+		"item": "http://canonbase.eu/entity/Q34",
+		"itemLabel": "Drottningholm Palace Theatre (SE) [Stockholm]",
+		"timeline_date": "1792",
+		"date_raw": "1792-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Drottlingham2.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q63",
+		"itemLabel": "Festspielhaus Hellerau (DE) [Dresden]",
+		"timeline_date": "1911",
+		"date_raw": "1911-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Festspielhaus%20Hellerau%201913.png"
+	},
+	{
+		"pLabel": "closure date",
+		"item": "http://canonbase.eu/entity/Q63",
+		"itemLabel": "Festspielhaus Hellerau (DE) [Dresden]",
+		"timeline_date": "1914",
+		"date_raw": "1914-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Festspielhaus%20Hellerau%201913.png"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q63",
+		"itemLabel": "Festspielhaus Hellerau (DE) [Dresden]",
+		"timeline_date": "1911",
+		"date_raw": "1911-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Festspielhaus%20Hellerau%201913.png"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12648",
+		"itemLabel": "National Theatre [Prague, CZ]",
+		"timeline_date": "1983",
+		"date_raw": "1983-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Prague%2007-2016%20View%20from%20Petrinska%20Tower%20img4.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12648",
+		"itemLabel": "National Theatre [Prague, CZ]",
+		"timeline_date": "1977",
+		"date_raw": "1977-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Prague%2007-2016%20View%20from%20Petrinska%20Tower%20img4.jpg"
+	},
+	{
+		"pLabel": "Capacity",
+		"item": "http://canonbase.eu/entity/Q12648",
+		"itemLabel": "National Theatre [Prague, CZ]",
+		"timeline_date": "1949",
+		"date_raw": "1949-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Prague%2007-2016%20View%20from%20Petrinska%20Tower%20img4.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q12648",
+		"itemLabel": "National Theatre [Prague, CZ]",
+		"timeline_date": "1881-06-11T00:00:00Z",
+		"date_raw": "1881-06-11T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Prague%2007-2016%20View%20from%20Petrinska%20Tower%20img4.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q12648",
+		"itemLabel": "National Theatre [Prague, CZ]",
+		"timeline_date": "1881-08-12T00:00:00Z",
+		"date_raw": "1881-08-12T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Prague%2007-2016%20View%20from%20Petrinska%20Tower%20img4.jpg"
+	},
+	{
+		"pLabel": "Capacity",
+		"item": "http://canonbase.eu/entity/Q12650",
+		"itemLabel": "State Opera [Prague]",
+		"timeline_date": "1949",
+		"date_raw": "1949-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Statni%20opera.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12650",
+		"itemLabel": "State Opera [Prague]",
+		"timeline_date": "1973",
+		"date_raw": "1973-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Statni%20opera.jpg"
+	},
+	{
+		"pLabel": "Building date",
+		"item": "http://canonbase.eu/entity/Q12650",
+		"itemLabel": "State Opera [Prague]",
+		"timeline_date": "1886-03-29T00:00:00Z",
+		"date_raw": "1886-03-29T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Statni%20opera.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q12650",
+		"itemLabel": "State Opera [Prague]",
+		"timeline_date": "1888-01-05T00:00:00Z",
+		"date_raw": "1888-01-05T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Statni%20opera.jpg"
+	},
+	{
+		"pLabel": "Capacity",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1949",
+		"date_raw": "1949-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1925",
+		"date_raw": "1925-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1791",
+		"date_raw": "1791-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1874",
+		"date_raw": "1874-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1882",
+		"date_raw": "1882-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1826",
+		"date_raw": "1826-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1859",
+		"date_raw": "1859-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1800",
+		"date_raw": "1800-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1991",
+		"date_raw": "1991-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1814",
+		"date_raw": "1814-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1844",
+		"date_raw": "1844-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q12651",
+		"itemLabel": "Estates Theatre [Prague]",
+		"timeline_date": "1783-04-21T00:00:00Z",
+		"date_raw": "1783-04-21T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Praga%20-%20Teatre%20dels%20Estats%20-%20Fa%C3%A7ana.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q12654",
+		"itemLabel": "Costanza e Fortezza [Prague]",
+		"timeline_date": "1723",
+		"date_raw": "1723-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Arolsen%20Klebeband%2015%20029.jpg"
+	},
+	{
+		"pLabel": "closure date",
+		"item": "http://canonbase.eu/entity/Q12654",
+		"itemLabel": "Costanza e Fortezza [Prague]",
+		"timeline_date": "1723",
+		"date_raw": "1723-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Arolsen%20Klebeband%2015%20029.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q12659",
+		"itemLabel": "Palace Theatre in Litomyšl [Litomyšl]",
+		"timeline_date": "1798",
+		"date_raw": "1798-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Litomy%C5%A1l%20SchlossTheater.JPG"
+	},
+	{
+		"pLabel": "closure date",
+		"item": "http://canonbase.eu/entity/Q12659",
+		"itemLabel": "Palace Theatre in Litomyšl [Litomyšl]",
+		"timeline_date": "1840-01-01T00:00:00Z",
+		"date_raw": "1840-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Litomy%C5%A1l%20SchlossTheater.JPG"
+	},
+	{
+		"pLabel": "Preservation state",
+		"item": "http://canonbase.eu/entity/Q12659",
+		"itemLabel": "Palace Theatre in Litomyšl [Litomyšl]",
+		"timeline_date": "1792",
+		"date_raw": "1792-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Litomy%C5%A1l%20SchlossTheater.JPG"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q13102",
+		"itemLabel": "Schaubühne am Lehniner Platz [Berlin]",
+		"timeline_date": "1928",
+		"date_raw": "1928-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q13102",
+		"itemLabel": "Schaubühne am Lehniner Platz [Berlin]",
+		"timeline_date": "1981",
+		"date_raw": "1981-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1863",
+		"date_raw": "1863-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1847",
+		"date_raw": "1847-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1861-04-09T00:00:00Z",
+		"date_raw": "1861-04-09T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1994-01-31T00:00:00Z",
+		"date_raw": "1994-01-31T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1999-10-07T00:00:00Z",
+		"date_raw": "1999-10-07T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1999-10-07T00:00:00Z",
+		"date_raw": "1999-10-07T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1843",
+		"date_raw": "1843-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1847",
+		"date_raw": "1847-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q13448",
+		"itemLabel": "Gran Teatre del Liceu [Barcelona, ES]",
+		"timeline_date": "1861",
+		"date_raw": "1861-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Gran%20Teatre%20del%20Liceu%2C%20fa%C3%A7ana%20Rambla.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q365",
+		"itemLabel": "Opera Garnier (FR) [Paris]",
+		"timeline_date": "1875",
+		"date_raw": "1875-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Opera%20full%20frontal%20architecture%2C%20May%202009.jpg"
+	},
+	{
+		"pLabel": "Building date",
+		"item": "http://canonbase.eu/entity/Q365",
+		"itemLabel": "Opera Garnier (FR) [Paris]",
+		"timeline_date": "1862",
+		"date_raw": "1862-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Opera%20full%20frontal%20architecture%2C%20May%202009.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q365",
+		"itemLabel": "Opera Garnier (FR) [Paris]",
+		"timeline_date": "1875",
+		"date_raw": "1875-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%20Opera%20full%20frontal%20architecture%2C%20May%202009.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q571",
+		"itemLabel": "Theater Confidencen (SE) [Solna]",
+		"timeline_date": "2003",
+		"date_raw": "2003-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Confidencen88.JPG"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q571",
+		"itemLabel": "Theater Confidencen (SE) [Solna]",
+		"timeline_date": "1753",
+		"date_raw": "1753-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Confidencen88.JPG"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q571",
+		"itemLabel": "Theater Confidencen (SE) [Solna]",
+		"timeline_date": "1753",
+		"date_raw": "1753-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Confidencen88.JPG"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1762",
+		"date_raw": "1762-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1686",
+		"date_raw": "1686-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1768",
+		"date_raw": "1768-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1762-01-29T00:00:00Z",
+		"date_raw": "1762-01-29T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "closure date",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1897",
+		"date_raw": "1897-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1766",
+		"date_raw": "1766-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q688",
+		"itemLabel": "Ceský Krumlov palace theatre [Český Krumlov, CZ]",
+		"timeline_date": "1683",
+		"date_raw": "1683-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Krumlov%20Augusto%204.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q696",
+		"itemLabel": "Ringtheater [Vienna, AT]",
+		"timeline_date": "1874-01-17T00:00:00Z",
+		"date_raw": "1874-01-17T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Ringtheater%20vor1881.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q696",
+		"itemLabel": "Ringtheater [Vienna, AT]",
+		"timeline_date": "1881-12-08T00:00:00Z",
+		"date_raw": "1881-12-08T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Ringtheater%20vor1881.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q696",
+		"itemLabel": "Ringtheater [Vienna, AT]",
+		"timeline_date": "1881",
+		"date_raw": "1881-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Ringtheater%20vor1881.jpg"
+	},
+	{
+		"pLabel": "Building date",
+		"item": "http://canonbase.eu/entity/Q7846",
+		"itemLabel": "Globe Theatre [London, UK]",
+		"timeline_date": "1599",
+		"date_raw": "1599-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q7846",
+		"itemLabel": "Globe Theatre [London, UK]",
+		"timeline_date": "1599",
+		"date_raw": "1599-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q7846",
+		"itemLabel": "Globe Theatre [London, UK]",
+		"timeline_date": "1613",
+		"date_raw": "1613-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q7846",
+		"itemLabel": "Globe Theatre [London, UK]",
+		"timeline_date": "1613",
+		"date_raw": "1613-01-01T00:00:00Z"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q7846",
+		"itemLabel": "Globe Theatre [London, UK]",
+		"timeline_date": "1613-06-29T00:00:00Z",
+		"date_raw": "1613-06-29T00:00:00Z"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q7857",
+		"itemLabel": "Festspielhaus [Bayreuth]",
+		"timeline_date": "1875",
+		"date_raw": "1875-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayreuth%20Festspielhaus%202006-07-16.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q7857",
+		"itemLabel": "Festspielhaus [Bayreuth]",
+		"timeline_date": "1958",
+		"date_raw": "1958-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayreuth%20Festspielhaus%202006-07-16.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q7857",
+		"itemLabel": "Festspielhaus [Bayreuth]",
+		"timeline_date": "1962",
+		"date_raw": "1962-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayreuth%20Festspielhaus%202006-07-16.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q7857",
+		"itemLabel": "Festspielhaus [Bayreuth]",
+		"timeline_date": "1933",
+		"date_raw": "1933-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayreuth%20Festspielhaus%202006-07-16.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q7857",
+		"itemLabel": "Festspielhaus [Bayreuth]",
+		"timeline_date": "1924",
+		"date_raw": "1924-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayreuth%20Festspielhaus%202006-07-16.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q7857",
+		"itemLabel": "Festspielhaus [Bayreuth]",
+		"timeline_date": "1876",
+		"date_raw": "1876-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Bayreuth%20Festspielhaus%202006-07-16.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q7891",
+		"itemLabel": "Den Norske Opera & Ballet [Oslo]",
+		"timeline_date": "2008",
+		"date_raw": "2008-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Full%20Opera%20by%20night.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q7891",
+		"itemLabel": "Den Norske Opera & Ballet [Oslo]",
+		"timeline_date": "2008",
+		"date_raw": "2008-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Full%20Opera%20by%20night.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1940",
+		"date_raw": "1940-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1787",
+		"date_raw": "1787-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1860-01-01T00:00:00Z",
+		"date_raw": "1860-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1920-01-01T00:00:00Z",
+		"date_raw": "1920-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1840-01-01T00:00:00Z",
+		"date_raw": "1840-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1950-01-01T00:00:00Z",
+		"date_raw": "1950-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1742-12-07T00:00:00Z",
+		"date_raw": "1742-12-07T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1843-08-18T00:00:00Z",
+		"date_raw": "1843-08-18T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1882-10-05T00:00:00Z",
+		"date_raw": "1882-10-05T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1955",
+		"date_raw": "1955-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1843",
+		"date_raw": "1843-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "Burnt down date",
+		"item": "http://canonbase.eu/entity/Q8009",
+		"itemLabel": "Berlin State Opera Unter den Linden [Berlin, DE]",
+		"timeline_date": "1843",
+		"date_raw": "1843-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%20Opera%20UdL%20asv2018-05.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q8082",
+		"itemLabel": "Berliner Ensemble - Theater am Schiffbauerdamm [Berlin]",
+		"timeline_date": "1892",
+		"date_raw": "1892-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%2C%20Mitte%2C%20Bertolt-Brecht-Platz%201%2C%20Theater%20am%20Schiffbauerdamm.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8082",
+		"itemLabel": "Berliner Ensemble - Theater am Schiffbauerdamm [Berlin]",
+		"timeline_date": "2000",
+		"date_raw": "2000-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%2C%20Mitte%2C%20Bertolt-Brecht-Platz%201%2C%20Theater%20am%20Schiffbauerdamm.jpg"
+	},
+	{
+		"pLabel": "Redevelopment date",
+		"item": "http://canonbase.eu/entity/Q8082",
+		"itemLabel": "Berliner Ensemble - Theater am Schiffbauerdamm [Berlin]",
+		"timeline_date": "1950-01-01T00:00:00Z",
+		"date_raw": "1950-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/Berlin%2C%20Mitte%2C%20Bertolt-Brecht-Platz%201%2C%20Theater%20am%20Schiffbauerdamm.jpg"
+	},
+	{
+		"pLabel": "Building date",
+		"item": "http://canonbase.eu/entity/Q8308",
+		"itemLabel": "Real Teatro de Corte del Palacio de El Pardo [Madrid]",
+		"timeline_date": "1826",
+		"date_raw": "1826-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Pardo-Palacio%20Real%20El%20Teatro.jpg"
+	},
+	{
+		"pLabel": "demolished",
+		"item": "http://canonbase.eu/entity/Q8308",
+		"itemLabel": "Real Teatro de Corte del Palacio de El Pardo [Madrid]",
+		"timeline_date": "1851",
+		"date_raw": "1851-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Pardo-Palacio%20Real%20El%20Teatro.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q8308",
+		"itemLabel": "Real Teatro de Corte del Palacio de El Pardo [Madrid]",
+		"timeline_date": "1848",
+		"date_raw": "1848-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Pardo-Palacio%20Real%20El%20Teatro.jpg"
+	},
+	{
+		"pLabel": "Canon Event Label",
+		"item": "http://canonbase.eu/entity/Q9343",
+		"itemLabel": "National Theatre [London]",
+		"timeline_date": "1976",
+		"date_raw": "1976-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Theatre%2C%20London.jpg"
+	},
+	{
+		"pLabel": "opening date (or re-opening)",
+		"item": "http://canonbase.eu/entity/Q9343",
+		"itemLabel": "National Theatre [London]",
+		"timeline_date": "1976",
+		"date_raw": "1976-01-01T00:00:00Z",
+		"img_wik": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Theatre%2C%20London.jpg"
+	}
+]
