@@ -298,37 +298,29 @@ header{
 
 /*footer*/
 footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
     background-color: #ce1644;
-    color: white;
-    padding: 3.5%;
-    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo {
     text-align: center;
-    position: relative;
+    width: 33.33%;
 }
-.contact-info p{
-    width: 60%;
-    margin-bottom: 0;
+.socials img{
+    width: 25px;
 }
-.logo {
-    display: inline-block;
+.socials{
+    margin-right: 2.5%;
+    width: 33.33%;
+    text-align: right;
 }
-.logo img {
-    max-width: 200px;
-}
-.contact-info {
-    position: absolute;
-    left: 20px;
-    top: 22.5%;
-    text-align: left;
-}
-.social-media {
-    position: absolute;
-    right: 20px;
-    top: 40%;
-}
-.social-media img{
-    width: 150px;
-    padding-left: 10px
+.contact{
+    margin-left: 2.5%;
+    width: 33.33%;
 }
 
 /* media queries */
@@ -399,27 +391,14 @@ footer {
     .about-text p{
         font-size: 14px;
     }
-    .footer p{
+
+    /*footer*/
+    footer p{
         font-size: 14px;
-    }
-    .footer .logo img {
-        max-width: 120px;
-    }
-    .footer .social-media img {
-        max-width: 100px;
     }
 }
 
 @media only screen and (max-width: 850px) {
-    .footer .logo img {
-        max-width: 100px;
-    }
-    .footer .social-media img {
-        max-width: 80px;
-    }
-    .contact-info p{
-        width: 70%;
-    }
     .logo{
         text-align: center;
     }
@@ -472,6 +451,7 @@ footer {
         padding: 10px 15px;
         border-radius: 10px;
     }
+    
     /* responsive navigation */
     .navigation li{
         font-size: 14px;
@@ -482,11 +462,22 @@ footer {
     .logo img{
         width: 150px;
     }
+
+    /*footer*/
+    footer p{
+        font-size: 12px;
+    }
+    .contact p{
+        width: 70%;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .socials img {
+        width: 20px;
+    }
 }
 @media only screen and (max-width: 600px) {
-    .footer p{
-        width: 50%;
-    }
     .wrapper h1{
         font-size: 42px;
         width: 150%;
@@ -521,9 +512,6 @@ footer {
         text-align: center;
         transform: translateX(0%);
     }
-    .social-media {
-        margin-top: 20px;
-    }
     /* navigation */
     .logo{
         width: 50%;
@@ -551,16 +539,37 @@ footer {
         padding: 10px 17px;
         font-size: 12px;
     }
+
+    /*footer*/
+    footer p{
+        font-size: 10px;
+    }
+    footer{
+        padding: 5px 0 ;
+    }
+    .contact p{
+        width: 70%;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .socials img {
+        width: 15px;
+    }
 }
 @media only screen and (max-width: 454px) {
+
+    /* wrappers */
     .wrapper h1{
-        font-size: 32px;
+        font-size: 20px;
         width: 140%;
     }
     .wrapper p{
         font-size: 12px;
         width: 110%;
-    }        
+    }
+
+    /* hero section */
     .hero{
         padding-top: 25px;
     }
@@ -570,6 +579,7 @@ footer {
     .mobile-carousel-img h4{
         font-size: 14px;
     }
+
     /* navigation */
     .logo img{
         width: 100px;
@@ -587,6 +597,20 @@ footer {
         margin-right: 11.148px;
     }
 
+    /*footer*/
+    footer p{
+        font-size: 8px;
+    }
+    footer{
+        padding: 5px 0 ;
+    }
+    .footer-logo img{
+        width: 50px;
+    }
+    .socials img {
+        width: 10px;
+    }
+
 }
 @media only screen and (max-width: 600px) {
     #searchBar {
@@ -597,15 +621,6 @@ footer {
     .wrapper-1{
         width: 1700px;
     }
-    .footer{
-        margin: 0 auto;
-        width: 1600px;
-        padding: 3.5% 0;
-    }
-    .outer-footer{
-        width: 100%;
-        background-color: #ce1644  
-    }
     .hero{
         width: 1600px;
         margin: 0 auto;
@@ -614,5 +629,18 @@ footer {
         width: 1600px;
         margin: 0 auto;
         margin-top: 22px;
+    }
+
+    /* footer */
+    footer{
+        margin: 0 auto;
+        width: 1700px;
+    }
+    .outer-footer{
+        width: 100%;
+        background-color: #ce1644;
+    }
+    .contact{
+        margin: 0;
     }
 }
