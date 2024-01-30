@@ -10,7 +10,7 @@
 		<script src="bolPlacement.js" defer></script>
 		<script src="bolHover.js" defer></script>
 		<script src="dropdown.js" defer></script>
-		
+		<script src="timeline.js"></script>
 	</head>
 	<body>
 		<div class="wrapper-header">
@@ -62,8 +62,8 @@
 			<div class="dropdown">
 				<button onclick="Sort()" class="dropbtn">Sort         <strong>&#8744;</strong></button>
 				<div id="dropdownSort" class="dropdown-content">
-					<a href="#">Peson</a>
-					<a href="#">Theater</a>
+					<a href="#">Persons</a>
+					<a href="#">Theaters</a>
 					<a href="#">Gear</a>
 					<a href="#">Events</a>
 				</div>
@@ -105,7 +105,7 @@
 				</tr>
 				<tr>
 					<th id="Person" class="underline">Person</th>
-					<th><img class="Icon" src="images/person_icon.png" alt=""></th>
+					<th><img id="personId" class="Icon" src="images/person_icon.png" alt=""></th>
 					<td colspan="10">
 						<div id="_1stRow" class="bollen-grid">
 							<!--1ste row -->
@@ -214,7 +214,7 @@
 				</tr>
 				<tr>
 					<th id="Theater" class="underline">Theatre</th>
-					<th><img class="Icon" src="images/theater_icon.png" alt=""></th>
+					<th><img id="theaterId" class="Icon" src="images/theater_icon.png" alt=""></th>
 					<td colspan="10">
 						<div id="_2thRow" class="bollen-grid">
 							<!--1ste row -->
@@ -323,7 +323,7 @@
 				</tr>
 				<tr>
 					<th id="Gear" class="underline">Gear</th>
-					<th><img class="Icon" src="images/gear_icon.png" alt=""></th>
+					<th><img id="gearId" class="Icon" src="images/gear_icon.png" alt=""></th>
 					<td colspan="10">
 						<div id="_3thRow" class="bollen-grid">
 							<!--1ste row -->
@@ -432,7 +432,7 @@
 				</tr>
 				<tr>
 					<th id="Events" class="underline">Events</th>
-					<th><img class="Icon" src="images/events-icon.png" alt=""></th>
+					<th><img id="eventsId" class="Icon" src="images/events-icon.png" alt=""></th>
 					<td colspan="10">
 						<div id="_4thRow" class="bollen-grid">
 							<!--1ste row -->
@@ -584,20 +584,23 @@
 				</div>
 			</div>
 		</section>
-		<footer class="footer">
-			<div class="logo">
-			<a href="#"><img src="./images/logo_canon.png" alt="Homepage"></a>
-			<p> ©Royal Institute for Theatre, Cinema and Sound 2024</p>
-			</div>
-			<div class="social-media">
-			<a href="social-media-link" href="#"><img src="./images/socials.png" alt="Social Media"></a>
-			</a>
-			</div>
-			<div class="contact-info">
-			<p>ritcs@ehb.be</p>
-			<p>Delaunoystraat 58, 1080 Sint-Jans-Molenbeek</p>
-			<p>+32 2 507 14 11</p>
-			</div>
-			</footer>
+		<div class="outer-footer">
+			<footer>
+				<div class="contact">
+					<p>ritcs@ehb.be</p>
+					<p>Delaunoystraat 58, 1080 Sint-Jans-Molenbeek</p>
+					<p>+32 2 507 14 11</p>
+				</div>
+				<div class="footer-logo">
+					<img src="./images/logo.svg" alt="" srcset="">
+					<p> ©Royal Institute for Theatre, Cinema and Sound 2024</p>
+				</div>
+				<div class="socials">
+					<img src="./images/facebook.png" alt="" srcset="">
+					<img src="./images/Instagram.png" alt="" srcset="">
+					<img src="./images/X.png" alt="" srcset="">
+				</div>
+			</footer>  
+		</div>
 	</body>
 </html>
