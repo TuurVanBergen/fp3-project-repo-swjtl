@@ -1,4 +1,4 @@
-import formatDate from "../../../Classes/formatDate.js";
+import formatDate from "./../../Classes/formatDate.js";
 import { getAllInfo, getPersonDate } from "../QueryTest/script.js";
 
 console.log("timeline test");
@@ -9,14 +9,14 @@ let personQcodes = ["Q31755", "Q33985", "Q30628", "Q20679", "Q22453", "Q21163"];
 
 let Qlist = ["Q20393", "Q31216", "Q21705", "Q20576", "Q123", "Q266", "Q8754"];
 
-// await getPersonTimelineData();
+await getPersonTimelineData();
 
 // getEquipmentTimelineData();
 // console.log(equiment);
 
 // getEventsTimelineData();
 
-getTheatresTimelineData();
+// getTheatresTimelineData();
 // need to do the same as persons. create new json file for all data
 
 // only use when needing all of the information. goes very slow for all fetches. is pretty fast for just one fetch
@@ -43,7 +43,7 @@ async function displayinformation(qCode) {
 
 // decide what data to use
 function getEventsTimelineData() {
-	fetch("http://127.0.0.1:5500/JSON/Events.json")
+	fetch("http://127.0.0.1:5502/app/JSON/Events.json")
 		.then((response) => response.json())
 		.then((data) => {
 			console.log(data);
@@ -65,7 +65,7 @@ function getEventsTimelineData() {
 }
 
 function getPersonTimelineData() {
-	fetch("http://127.0.0.1:5500/JSON/PersonsByOccupation.json")
+	fetch("http://127.0.0.1:5502/app/JSON/PersonsByOccupation.json")
 		.then((response) => response.json())
 		.then((data) => {
 			// console.log(data);
@@ -109,7 +109,7 @@ async function addDatesToPersons() {
 // gets all equipment with an identified date
 
 async function getEquipmentTimelineData() {
-	await fetch("http://127.0.0.1:5500/JSON/equipment.json")
+	await fetch("http://127.0.0.1:5502/app/JSON/equipment.json")
 		.then((response) => response.json())
 		.then((data) => {
 			for (let info in data) {
@@ -130,7 +130,7 @@ async function getEquipmentTimelineData() {
 }
 
 async function getTheatresTimelineData() {
-	await fetch("http://127.0.0.1:5500/JSON/Theatres.json")
+	await fetch("http://127.0.0.1:5502/app/JSON/Theatres.json")
 		.then((response) => response.json())
 		.then((data) => {
 			for (let info in data) {

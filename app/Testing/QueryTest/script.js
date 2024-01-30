@@ -1,4 +1,4 @@
-import formatDate from "../../../Classes/formatDate.js";
+import formatDate from "./../../Classes/formatDate.js";
 
 console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
