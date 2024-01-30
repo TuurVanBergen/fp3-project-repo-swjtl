@@ -346,46 +346,104 @@ td:first-child {
 }
 
 /***********************************************/
-.footer {
-	margin-top: 5vh;
-	background-color: #ce1644;
+/*footer*/
+footer {
+	margin-top: 20px;
 	color: white;
-	text-align: center;
-	padding: 10px 10px;
-	position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: #ce1644;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.footer p {
-	margin-left: 10%;
+.footer-logo {
+    text-align: center;
+    width: 33.33%;
 }
-.footer a {
-	color: white;
+.socials img{
+    width: 25px;
 }
-
-.footer .logo {
-	display: inline-block;
+.socials{
+    margin-right: 2.5%;
+    width: 33.33%;
+    text-align: right;
 }
-
-.footer .logo img {
-	max-width: 200px;
-	height: auto;
-}
-
-.footer .contact-info {
-	position: absolute;
-	left: 10px;
-	top: 50%;
-	margin-top: -75px;
-	text-align: left;
-}
-.footer .social-media {
-	position: absolute;
-	right: 20px;
-	top: 50%;
-	margin-top: -20px;
+.contact{
+    margin-left: 2.5%;
+    width: 33.33%;
 }
 
-.footer .social-media img {
-	width: 150px;
+/* media queries */
+@media only screen and (max-width: 992px) {
+    /*footer*/
+    footer p{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    /*footer*/
+    footer p{
+        font-size: 12px;
+    }
+    .contact p{
+        width: 70%;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .socials img {
+        width: 20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    /*footer*/
+    footer p{
+        font-size: 10px;
+    }
+    footer{
+        padding: 5px 0 ;
+    }
+    .contact p{
+        width: 70%;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .socials img {
+        width: 15px;
+    }
+}
+@media only screen and (max-width: 454px) {
+    /*footer*/
+    footer p{
+        font-size: 8px;
+    }
+    footer{
+        padding: 5px 0 ;
+    }
+    .footer-logo img{
+        width: 50px;
+    }
+    .socials img {
+        width: 10px;
+    }
+
+}
+@media only screen and (min-width: 1700px) {
+    /* footer */
+    footer{
+        margin: 0 auto;
+        width: 1700px;
+    }
+    .outer-footer{
+        width: 100%;
+        background-color: #ce1644;
+    }
+    .contact{
+        margin: 0;
+    }
 }
 
 #selected {
