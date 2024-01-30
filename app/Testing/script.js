@@ -8,6 +8,7 @@ let name;
 let age;
 let description;
 // fetching json test
+
 fetch("http://127.0.0.1:5500/CanonBase2SWTJL/Testing/JSON/test.json")
 	.then((response) => response.json())
 	.then((data) => {

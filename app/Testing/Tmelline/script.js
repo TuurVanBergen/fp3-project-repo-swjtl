@@ -1,5 +1,9 @@
 import formatDate from "./../../Classes/formatDate.js";
-import { getAllInfo, getPersonDate } from "../QueryTest/script.js";
+import {
+	getAllInfo,
+	getPersonDate,
+	getTheatreInfo,
+} from "../QueryTest/script.js";
 
 console.log("timeline test");
 
@@ -9,13 +13,13 @@ let personQcodes = ["Q31755", "Q33985", "Q30628", "Q20679", "Q22453", "Q21163"];
 
 let Qlist = ["Q20393", "Q31216", "Q21705", "Q20576", "Q123", "Q266", "Q8754"];
 
-await getPersonTimelineData();
+// await getPersonTimelineData();
 
 // getEquipmentTimelineData();
 // console.log(equiment);
 
 // getEventsTimelineData();
-
+await getTheatreInfo("Q133");
 // getTheatresTimelineData();
 // need to do the same as persons. create new json file for all data
 
@@ -130,19 +134,16 @@ async function getEquipmentTimelineData() {
 }
 
 async function getTheatresTimelineData() {
-	await fetch("http://127.0.0.1:5502/app/JSON/Theatres.json")
+	await fetch("http://127.0.0.1:5502/app/JSON/TheatresByLocation.json")
 		.then((response) => response.json())
 		.then((data) => {
 			for (let info in data) {
-				let dateString = new formatDate();
-				let openingDate = dateString.formatTimelineDate(data[info].start);
-				console.log(openingDate);
+				console.log(data[info]);
+				//returns last part of link (Q-code)
+				let theatreLink = data[info].theatre;
 
-				let theatreName = data[info].itemLabel;
-
-				let location = data[info].itemLabel.lastIndexOf("[");
-				location = data[info].itemLabel.substring(itemLabel);
-				console.log(location);
+				let qCode = data[info].theatre.lastIndexOf("Q");
+				qCode = data[info].theatre.substring(qCode);
 			}
 		})
 		.catch((error) => console.error("Error fetching the file:", error));
