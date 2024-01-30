@@ -41,13 +41,7 @@ export async function getPersonDate(qCode) {
 
 export async function getTheatreInfo(qCode) {
 	console.log("CALLED");
-	let currentObject = {
-		name: undefined,
-		continent: undefined,
-		country: undefined,
-		city: undefined,
-		image: undefined,
-	};
+	let currentObject = {};
 	// ---- Pvalues for Dates ------
 	// P101 buildingDate
 	// P102 openingDate
@@ -69,7 +63,7 @@ export async function getTheatreInfo(qCode) {
 		let theatreName = eval(
 			`data.entities.` + qCode + `.labels.en.value`
 		).replace(/\[.*?\]/g, "");
-
+		currentObject.theatreName = theatreName;
 		console.log(theatreName);
 
 		for (let p in properties) {
@@ -77,7 +71,7 @@ export async function getTheatreInfo(qCode) {
 			let length;
 			switch (properties[p]) {
 				case "P101":
-					console.log("P101 buildingDate FOUND");
+					// console.log("P101 buildingDate FOUND");
 					let buildingDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P101`)) {
 						buildingDate[i] = eval(
@@ -90,11 +84,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.buildingDate = buildingDate;
-					console.log(currentObject.buildingDate);
+					// console.log(currentObject.buildingDate);
 
 					break;
 				case "P102":
-					console.log("P102 openingDate FOUND");
+					// console.log("P102 openingDate FOUND");
 					let openingDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P102`)) {
 						openingDate[i] = eval(
@@ -107,11 +101,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.openingDate = openingDate;
-					console.log(currentObject.openingDate);
+					// console.log(currentObject.openingDate);
 
 					break;
 				case "P103":
-					console.log("P103 restorationDate FOUND");
+					// console.log("P103 restorationDate FOUND");
 					let restorationDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P103`)) {
 						restorationDate[i] = eval(
@@ -124,11 +118,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.restorationDate = restorationDate;
-					console.log(currentObject.restorationDate);
+					// console.log(currentObject.restorationDate);
 
 					break;
 				case "P104":
-					console.log("P104 redevelopmentDate FOUND");
+					// console.log("P104 redevelopmentDate FOUND");
 					let redevelopmentDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P104`)) {
 						redevelopmentDate[i] = eval(
@@ -141,11 +135,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.redevelopmentDate = redevelopmentDate;
-					console.log(currentObject.redevelopmentDate);
+					// console.log(currentObject.redevelopmentDate);
 
 					break;
 				case "P105":
-					console.log("P105 discoveryDate FOUND");
+					// console.log("P105 discoveryDate FOUND");
 					let discoveryDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P105`)) {
 						discoveryDate[i] = eval(
@@ -158,11 +152,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.discoveryDate = discoveryDate;
-					console.log(currentObject.discoveryDate);
+					// console.log(currentObject.discoveryDate);
 
 					break;
 				case "P106":
-					console.log("P106 burntDownDate FOUND");
+					// console.log("P106 burntDownDate FOUND");
 					let burntDownDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P106`)) {
 						burntDownDate[i] = eval(
@@ -175,11 +169,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.burntDownDate = burntDownDate;
-					console.log(currentObject.burntDownDate);
+					// console.log(currentObject.burntDownDate);
 
 					break;
 				case "P107":
-					console.log("P107 closureDate FOUND");
+					// console.log("P107 closureDate FOUND");
 					let closureDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P107`)) {
 						closureDate[i] = eval(
@@ -192,11 +186,11 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.closureDate = closureDate;
-					console.log(currentObject.closureDate);
+					// console.log(currentObject.closureDate);
 
 					break;
 				case "P108":
-					console.log("P108 demolishedDate FOUND");
+					// console.log("P108 demolishedDate FOUND");
 					let demolishedDate = [];
 					for (let i in eval(`data.entities.` + qCode + `.claims.P108`)) {
 						demolishedDate[i] = eval(
@@ -209,12 +203,42 @@ export async function getTheatreInfo(qCode) {
 					}
 
 					currentObject.demolishedDate = demolishedDate;
-					console.log(currentObject.demolishedDate);
+					// console.log(currentObject.demolishedDate);
 
+					break;
+				case "P2":
+					// console.log("P2 Found!");
+
+					// console.log(properties[p]);
+					console.log(
+						eval(
+							`data.entities.` +
+								qCode +
+								`.claims.` +
+								properties[p] +
+								`[0].mainsnak.datavalue.value`
+						)
+					);
+					let imgPath = eval(
+						`data.entities.` +
+							qCode +
+							`.claims.` +
+							properties[p] +
+							`[0].mainsnak.datavalue.value`
+					);
+					// console.log(imgPath);
+
+					let imageLink = `http://commons.wikimedia.org/wiki/Special:FilePath/${imgPath.replace(
+						/\s/g,
+						""
+					)}`;
+
+					currentObject.imageLink = imageLink;
 					break;
 			}
 		}
-		// recieve image
+		console.log(currentObject);
+		return currentObject;
 	} catch {
 		console.error("No Date Found", error);
 	}
