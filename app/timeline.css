@@ -214,7 +214,7 @@ td:first-child {
 	font-size: 30px;
 	text-align: center;
 	min-width: 10px;
-	min-height: 30px;
+	min-height: 50px;
 	z-index: 2;
 }
 

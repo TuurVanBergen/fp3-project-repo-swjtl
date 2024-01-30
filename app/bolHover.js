@@ -155,11 +155,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// Update translateY value based on row index
 			let hoverInfoContainer = document.querySelector("#hoverInfoContainer");
 			if (index == 2) {
-				translateYValue = "-17vh";
+				translateYValue = "-22vh";
 			} else if (index == 3) {
-				translateYValue = "-13vh";
+				translateYValue = "-17vh";
 			} else if (index == 4) {
-				translateYValue = "-9vh";
+				translateYValue = "-12vh";
 			} else if (index == 5) {
 				translateYValue = "-5vh";
 			} else {
