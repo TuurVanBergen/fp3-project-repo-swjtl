@@ -4,38 +4,68 @@ console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
 
 // getAllInfo(qCode);
-// getAllPersonDates("Q22936");
+// getPersonDate("Q31755");
 
 // returns only dateofbirth and dateofdeath of person
 export async function getPersonDate(qCode) {
-	let personDates = {
-		dateOfBirth: undefined,
-		dateOfDeath: undefined,
-		description: "",
-	};
+	let personDates = {};
 	try {
 		const response = await fetch(setUrl(qCode));
 		const data = await response.json();
 
-		let dateOfBirth = eval(
-			`data.entities.` + qCode + `.claims.P30[0].mainsnak.datavalue.value.time`
-		);
-		let dateOfDeath = eval(
-			`data.entities.` + qCode + `.claims.P31[0].mainsnak.datavalue.value.time`
-		);
-		let description = eval(`data.entities.` + qCode + `.descriptions.en.value`);
-		let dateString = new formatDate();
-		dateOfBirth = dateString.formatYear(dateOfBirth);
+		try {
+			let dateOfBirth = eval(
+				`data.entities.` +
+					qCode +
+					`.claims.P30[0].mainsnak.datavalue.value.time`
+			);
 
-		dateOfDeath = dateString.formatYear(dateOfDeath);
+			let dateString = new formatDate();
+			dateOfBirth = dateString.formatYear(dateOfBirth);
 
-		personDates.description = description;
-		personDates.dateOfBirth = dateOfBirth;
-		personDates.dateOfDeath = dateOfDeath;
+			personDates.dateOfBirth = dateOfBirth;
+		} catch {
+			console.log("dateOfBirth undefined");
+		}
+
+		try {
+			let dateOfDeath = eval(
+				`data.entities.` +
+					qCode +
+					`.claims.P31[0].mainsnak.datavalue.value.time`
+			);
+			dateOfDeath = dateString.formatYear(dateOfDeath);
+
+			personDates.dateOfDeath = dateOfDeath;
+		} catch {
+			console.log("dateOfDeath undefined");
+		}
+
+		try {
+			let description = eval(
+				`data.entities.` + qCode + `.descriptions.en.value`
+			);
+			personDates.description = description;
+		} catch {
+			console.log("description undefined");
+		}
+
+		try {
+			let imgPath = eval(
+				`data.entities.` + qCode + `.claims.P2[0].mainsnak.datavalue.value`
+			);
+
+			let imageLink = `http://commons.wikimedia.org/wiki/Special:FilePath/${imgPath}`;
+
+			personDates.imageLink = imageLink;
+		} catch {
+			console.log("imageLink undefined");
+		}
 	} catch {
 		console.error("No Date Found");
 	}
 	console.log(personDates);
+
 	return personDates;
 }
 
