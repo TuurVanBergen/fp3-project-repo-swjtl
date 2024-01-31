@@ -5,37 +5,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="timeline.css" />
-		<link rel="stylesheet" href="dropdown.css">
+		<link rel="stylesheet" href="dropdown.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="bolPlacement.js" defer></script>
+		<!-- <script src="bolPlacement.js" defer></script> -->
 		<script src="bolHover.js" defer></script>
 		<script src="dropdown.js" defer></script>
 		<script src="timeline.js"></script>
 	</head>
 	<body>
 		<div class="wrapper-header">
-            <header>
-                <div class="logo">
-                    <a href="./index.html"><img src="./images/logo.svg" alt="" srcset="" /></a>
-                </div>
-                <div class="navigation">
-                    <ul>
-                        <li>
-                            <a href="list.html">List</a>
-                        </li>
-                        <li id="selected">
-                            <a href="timeline.html">Timeline</a>
-                        </li>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="searchBar">
-                    <input id="searchBar" placeholder="Search...                &#x1F50D;" type="text" />
-                </div>
-            </header>
-        </div>
+			<header>
+				<div class="logo">
+					<a href="./index.html"><img src="./images/logo.svg" alt="" srcset="" /></a>
+				</div>
+				<div class="navigation">
+					<ul>
+						<li>
+							<a href="list.html">List</a>
+						</li>
+						<li id="selected">
+							<a href="timeline.html">Timeline</a>
+						</li>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+					</ul>
+				</div>
+				<div class="searchBar">
+					<input id="searchBar" placeholder="Search...                &#x1F50D;" type="text" />
+				</div>
+			</header>
+		</div>
 		<div id="titleBackground"></div>
 		<div id="titleName">
 			<h2>Timeline</h2>
@@ -47,9 +47,9 @@
 
 		<div class="filter">
 			<div class="dropdown">
-				<button onclick="FilterYear()" class="dropbtn">Year         <strong>&#8744;</strong></button>
+				<button onclick="FilterYear()" class="dropbtn">Year <strong>&#8744;</strong></button>
 				<div id="dropdownYear" class="dropdown-content">
-					<input type="text" placeholder="Search.." id="inputYear" onkeyup="filterFunction()">
+					<input type="text" placeholder="Search.." id="inputYear" onkeyup="filterFunction()" />
 					<a href="#">1400-1500</a>
 					<a href="#">1500-1600</a>
 					<a href="#">1600-1700</a>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<div class="dropdown">
-				<button onclick="Sort()" class="dropbtn">Sort         <strong>&#8744;</strong></button>
+				<button onclick="Sort()" class="dropbtn">Sort <strong>&#8744;</strong></button>
 				<div id="dropdownSort" class="dropdown-content">
 					<a href="#">Persons</a>
 					<a href="#">Theaters</a>
@@ -105,7 +105,7 @@
 				</tr>
 				<tr>
 					<th id="Person" class="underline">Person</th>
-					<th><img id="personId" class="Icon" src="images/person_icon.png" alt=""></th>
+					<th><img id="personId" class="Icon" src="images/person_icon.png" alt="" /></th>
 					<td colspan="10">
 						<div id="_1stRow" class="bollen-grid">
 							<!--1ste row -->
@@ -214,7 +214,7 @@
 				</tr>
 				<tr>
 					<th id="Theater" class="underline">Theatre</th>
-					<th><img id="theaterId" class="Icon" src="images/theater_icon.png" alt=""></th>
+					<th><img id="theaterId" class="Icon" src="images/theater_icon.png" alt="" /></th>
 					<td colspan="10">
 						<div id="_2thRow" class="bollen-grid">
 							<!--1ste row -->
@@ -323,7 +323,7 @@
 				</tr>
 				<tr>
 					<th id="Gear" class="underline">Gear</th>
-					<th><img id="gearId" class="Icon" src="images/gear_icon.png" alt=""></th>
+					<th><img id="gearId" class="Icon" src="images/gear_icon.png" alt="" /></th>
 					<td colspan="10">
 						<div id="_3thRow" class="bollen-grid">
 							<!--1ste row -->
@@ -432,7 +432,7 @@
 				</tr>
 				<tr>
 					<th id="Events" class="underline">Events</th>
-					<th><img id="eventsId" class="Icon" src="images/events-icon.png" alt=""></th>
+					<th><img id="eventsId" class="Icon" src="images/events-icon.png" alt="" /></th>
 					<td colspan="10">
 						<div id="_4thRow" class="bollen-grid">
 							<!--1ste row -->
@@ -541,8 +541,8 @@
 				</tr>
 			</table>
 		</div>
-        <div id="hoverInfoContainer">
-            <!-- <div id="hoverInfo">
+		<div id="hoverInfoContainer">
+			<!-- <div id="hoverInfo">
                 <img id="hoverImg" src="./images/theatreBerlin.png" alt="" />
                 <div id="hoverInfoList">
                     <h3 id="titleHover">Royal theater of London</h3>
@@ -551,10 +551,7 @@
                     <a href="#">More</a>
                 </div>
             </div> -->
-        </div>
-		<input id="rowInput" type="number" />
-		<input id="bolInput" type="number" />
-		<div id="testBtn">test btn</div>
+		</div>
 
 		<section id="footer">
 			<h1 class="title">How to use our timeline</h1>
@@ -592,15 +589,15 @@
 					<p>+32 2 507 14 11</p>
 				</div>
 				<div class="footer-logo">
-					<img src="./images/logo.svg" alt="" srcset="">
-					<p> ©Royal Institute for Theatre, Cinema and Sound 2024</p>
+					<img src="./images/logo.svg" alt="" srcset="" />
+					<p>©Royal Institute for Theatre, Cinema and Sound 2024</p>
 				</div>
 				<div class="socials">
-					<img src="./images/facebook.png" alt="" srcset="">
-					<img src="./images/Instagram.png" alt="" srcset="">
-					<img src="./images/X.png" alt="" srcset="">
+					<img src="./images/facebook.png" alt="" srcset="" />
+					<img src="./images/Instagram.png" alt="" srcset="" />
+					<img src="./images/X.png" alt="" srcset="" />
 				</div>
-			</footer>  
+			</footer>
 		</div>
 	</body>
 </html>
