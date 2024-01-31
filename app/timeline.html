@@ -7,10 +7,11 @@
 		<link rel="stylesheet" href="timeline.css" />
 		<link rel="stylesheet" href="dropdown.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<!-- <script src="bolPlacement.js" defer></script> -->
+
 		<script src="bolHover.js" defer></script>
 		<script src="dropdown.js" defer></script>
 		<script src="timeline.js"></script>
+		<script src="zoomTimeline.js" defer></script>
 	</head>
 	<body>
 		<div class="wrapper-header">
@@ -49,13 +50,16 @@
 			<div class="dropdown">
 				<button onclick="FilterYear()" class="dropbtn">Year <strong>&#8744;</strong></button>
 				<div id="dropdownYear" class="dropdown-content">
-					<a href="#">1400-1500</a>
-					<a href="#">1500-1600</a>
-					<a href="#">1600-1700</a>
-					<a href="#">1700-1800</a>
-					<a href="#">1800-1900</a>
-					<a href="#">1900-2000</a>
-					<a href="#">2000-2100</a>
+					<a class="century" href="#">all</a>
+					<a class="century" href="#">1200-1300</a>
+					<a class="century" href="#">1300-1400</a>
+					<a class="century" href="#">1400-1500</a>
+					<a class="century" href="#">1500-1600</a>
+					<a class="century" href="#">1600-1700</a>
+					<a class="century" href="#">1700-1800</a>
+					<a class="century" href="#">1800-1900</a>
+					<a class="century" href="#">1900-2000</a>
+					<a class="century" href="#">2000-2100</a>
 				</div>
 			</div>
 			<div class="dropdown">
