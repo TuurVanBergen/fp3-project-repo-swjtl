@@ -128,12 +128,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 						}
 					}
 					hoverInfo.innerHTML = `
-                    <img class="hoverImg" src="./images/theatreBerlin.png" alt="" />
                     <div class="hoverInfoList">
                         <h3 class="titleHover">${personName}</h3>
-                        <p class="hoverYear">1423</p>
-                        <p class="hoverType">Theater</p>
-                        <a href="./objectinfo.html">More</a>
+                        <p class="hoverYear">${personDateOfBrith}</p>
+                        <p class="hoverType">${PersonDescribsion}</p>
+                        <a id="${qCode}" href="./objectinfo.html">More</a>
                     </div>
                 `;
 				}
