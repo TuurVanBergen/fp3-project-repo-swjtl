@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// Update translateY value based on row index
 			let hoverInfoContainer = document.querySelector("#hoverInfoContainer");
 			if (index == 2) {
-				translateYValue = "-30vh";
+				translateYValue = "-27vh";
 			} else if (index == 3) {
 				translateYValue = "-17vh";
 			} else if (index == 4) {
