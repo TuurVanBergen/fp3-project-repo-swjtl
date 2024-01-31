@@ -78,9 +78,14 @@ header {
 	margin: 0px auto;
 	columns: 4;
 	column-gap: 30px;
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: space-between;
 }
 .box {
-	width: 235px;
+	width: 18%;
 	padding: 30px;
 	background-color: #380022;
 	margin-bottom: 10px;

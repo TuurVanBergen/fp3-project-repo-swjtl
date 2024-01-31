@@ -114,8 +114,6 @@ async function addDatesToPersons() {
 	// document.getElementById("jsonString").innerText = JSON.stringify(persons);
 }
 
-// gets all equipment with an identified date
-
 async function getEquipmentTimelineData() {
 	await fetch("http://127.0.0.1:5502/app/JSON/equipment.json")
 		.then((response) => response.json())
@@ -136,8 +134,10 @@ async function getEquipmentTimelineData() {
 		})
 		.catch((error) => console.error("Error fetching the file:", error));
 }
+
+// combines the fetch and the local JSON file into singular objects
 async function addDatesToTheatre() {
-	document.getElementById("jsonString").innerText += "[";
+	// document.getElementById("jsonString").innerText += "[";
 	for (let t in theatres) {
 		// console.log("THEATRE CALLED");
 		let theatreObject = JSON.stringify(theatres[t]);
@@ -172,11 +172,11 @@ async function addDatesToTheatre() {
 
 		// console.log("THEATRE ENDED");
 		console.log(theatreObject);
-		console.log(JSON.stringify(theatreObject));
-		document.getElementById("jsonString").innerText +=
-			JSON.stringify(theatreObject) + ",";
+		// console.log(JSON.stringify(theatreObject));
+		// document.getElementById("jsonString").innerText +=
+		// 	JSON.stringify(theatreObject) + ",";
 	}
-	document.getElementById("jsonString").innerText += "]";
+	// document.getElementById("jsonString").innerText += "]";
 	console.log("FETCH DONE ");
 	console.log(theatres);
 }
