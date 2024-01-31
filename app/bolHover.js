@@ -61,81 +61,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	});
 });
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-// 	let click = true;
-
-// 	document.addEventListener("click", function () {
-// 		click = !click;
-// 	});
-// 	document.addEventListener("mouseover", function (event) {
-// 		console.log(click);
-
-// 		let bolElement = event.target.classList.contains("bol") ? event.target : event.target.closest(".bol");
-// 		if (bolElement) {
-// 			// Get the first p element within the .bol element
-// 			let pElement = bolElement.querySelector("p");
-// 			let pCount = pElement ? parseInt(pElement.textContent, 10) : 1;
-
-// 			// Clear the content of #hoverInfoContainer
-// 			document.querySelector("#hoverInfoContainer").innerHTML = "";
-
-// 			// Log the text content of the p element and display the hoverInfo
-// 			for (let i = 0; i < pCount; i++) {
-// 				let hoverInfo = document.createElement("div");
-// 				hoverInfo.classList.add("hoverInfo");
-
-// 				hoverInfo.innerHTML = `
-//                     <img class="hoverImg" src="./images/theatreBerlin.png" alt="" />
-//                     <div class="hoverInfoList">
-//                         <h3 class="titleHover">Royal theater of London</h3>
-//                         <p class="hoverYear">1423</p>
-//                         <p class="hoverType">Theater</p>
-//                         <a href="./objectinfo.html">More</a>
-//                     </div>
-//                 `;
-
-// 				// Get the computed style of the .bol element
-// 				let style = window.getComputedStyle(bolElement);
-// 				// Get the background color
-// 				let bgColor = style.backgroundColor;
-
-// 				// Apply the background color to the border of the hoverInfo element
-// 				hoverInfo.style.border = "5px solid " + bgColor;
-// 				hoverInfo.style.display = "flex";
-
-// 				// Set the position of the hoverInfo element based on pCount
-// 				if (pCount === 1) {
-// 					let mouseX = event.clientX;
-// 					let ratio = mouseX / window.innerWidth;
-// 					const slope = (190 - -50) / 1; // (y2 - y1) / (x2 - x1)  (100- -50)
-// 					const yIntercept = -110; // y1  -50
-// 					const y = slope * ratio + yIntercept;
-
-// 					hoverInfo.style.transform = `translateX(${y}%) translateY(0)`;
-
-// 					// hoverInfo.style.transform = `translateX(20%) translateY(-20vh)`;
-// 				} else {
-// 					hoverInfo.style.top = bolElement.getBoundingClientRect().top + window.scrollY - hoverInfo.clientHeight + "px";
-// 				}
-
-// 				// Append the current hoverInfo element to the container
-// 				document.querySelector("#hoverInfoContainer").appendChild(hoverInfo);
-// 			}
-// 		}
-// 	});
-
-// 	document.addEventListener("mouseout", function (event) {
-// 		// Check if the hovered element or its parent has the class 'bol'
-// 		if (event.target.classList.contains("bol") || event.target.closest(".bol")) {
-// 			if (!click) {
-// 				document.querySelector("#hoverInfoContainer").innerHTML = "";
-// 			}
-// 		}
-// 	});
-// });
-
 document.addEventListener("DOMContentLoaded", (event) => {
-	let click = true;
+	let click = false;
 	let translateYValue;
 
 	document.addEventListener("click", function () {
@@ -155,7 +82,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// Update translateY value based on row index
 			let hoverInfoContainer = document.querySelector("#hoverInfoContainer");
 			if (index == 2) {
-				translateYValue = "-22vh";
+				translateYValue = "-25vh";
 			} else if (index == 3) {
 				translateYValue = "-17vh";
 			} else if (index == 4) {
@@ -171,6 +98,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	document.addEventListener("mouseover", function (event) {
 		let bolElement = event.target.classList.contains("bol") ? event.target : event.target.closest(".bol");
 		if (bolElement) {
+			console.log(filteredPersons);
+
 			// Get the first p element within the .bol element
 			let pElement = bolElement.querySelector("p");
 			let pCount = pElement ? parseInt(pElement.textContent, 10) : 1;
@@ -179,19 +108,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			document.querySelector("#hoverInfoContainer").innerHTML = "";
 
 			// Log the text content of the p element and display the hoverInfo
-			for (let i = 0; i < pCount; i++) {
-				let hoverInfo = document.createElement("div");
-				hoverInfo.classList.add("hoverInfo");
+			for (let i in bolElement.classList) {
+				let personName;
+				let personDateOfBrith;
+				let PersonDescribsion;
 
-				hoverInfo.innerHTML = `
-                    <img class="hoverImg" src="./images/theatreBerlin.png" alt="" />
+				let hoverInfo = document.createElement("div");
+				if (bolElement.classList[i].startsWith("Q")) {
+					console.log(bolElement.classList[i]);
+
+					let qCode = bolElement.classList[i];
+					for (let i = 0; i < filteredPersons.length; i++) {
+						hoverInfo.classList.add("hoverInfo");
+						if (qCode == filteredPersons[i].qCode) {
+							personName = filteredPersons[i].name;
+							console.log("personName " + personName);
+							personDateOfBrith = filteredPersons[i].dateOfBirth;
+							PersonDescribsion = filteredPersons[i].description;
+						}
+					}
+					hoverInfo.innerHTML = `
                     <div class="hoverInfoList">
-                        <h3 class="titleHover">Royal theater of London</h3>
-                        <p class="hoverYear">1423</p>
-                        <p class="hoverType">Theater</p>
-                        <a href="./objectinfo.html">More</a>
+                        <h3 class="titleHover">${personName}</h3>
+                        <p class="hoverYear">${personDateOfBrith}</p>
+                        <p class="hoverType">${PersonDescribsion}</p>
+                        <a id="${qCode}" href="./objectinfo.html">More</a>
                     </div>
                 `;
+				}
 
 				// Get the computed style of the .bol element
 				let style = window.getComputedStyle(bolElement);
@@ -206,19 +150,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
 				if (pCount === 1) {
 					let mouseX = event.clientX;
 					let ratio = mouseX / window.innerWidth;
-					const slope = (190 - -50) / 1; // (y2 - y1) / (x2 - x1)  (100- -50)
-					const yIntercept = -110; // y1  -50
-					const y = slope * ratio + yIntercept;
+					const slope = (700 - -50) / 1; // (y2 - y1) / (x2 - x1)  (100- -50)
+					const xIntercept = -400; // y1  -50
+					const x = slope * ratio + xIntercept;
 
-					hoverInfo.style.transform = `translateX(${y}%) translateY(${translateYValue})`;
+					hoverInfo.style.transform = `translateX(${x}%) translateY(${translateYValue})`;
+					hoverInfoContainer.style.height = "10px";
 
 					// hoverInfo.style.transform = `translateX(20%) translateY(-20vh)`;
 				} else {
 					hoverInfo.style.top = bolElement.getBoundingClientRect().top + window.scrollY - hoverInfo.clientHeight + "px";
+					hoverInfoContainer.style.height = "min-content";
 				}
 
 				// Append the current hoverInfo element to the container
-				document.querySelector("#hoverInfoContainer").appendChild(hoverInfo);
+				if (!hoverInfo.innerHTML == "") {
+					document.querySelector("#hoverInfoContainer").appendChild(hoverInfo);
+				}
 			}
 		}
 	});
