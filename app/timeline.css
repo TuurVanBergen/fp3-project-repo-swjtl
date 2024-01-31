@@ -70,6 +70,7 @@ h2 {
 	background-color: #390022;
 	color: #efcca6;
 	border-radius: 30px;
+	min-width: 200px;
 	width: min-content;
 	display: flex;
 
