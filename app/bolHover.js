@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
-	let click = true;
+	let click = false;
 	let translateYValue;
 
 	document.addEventListener("click", function () {
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// Update translateY value based on row index
 			let hoverInfoContainer = document.querySelector("#hoverInfoContainer");
 			if (index == 2) {
-				translateYValue = "-22vh";
+				translateYValue = "-30vh";
 			} else if (index == 3) {
 				translateYValue = "-17vh";
 			} else if (index == 4) {
@@ -150,11 +150,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 				if (pCount === 1) {
 					let mouseX = event.clientX;
 					let ratio = mouseX / window.innerWidth;
-					const slope = (190 - -50) / 1; // (y2 - y1) / (x2 - x1)  (100- -50)
-					const yIntercept = -110; // y1  -50
-					const y = slope * ratio + yIntercept;
+					const slope = (700 - -50) / 1; // (y2 - y1) / (x2 - x1)  (100- -50)
+					const xIntercept = -400; // y1  -50
+					const x = slope * ratio + xIntercept;
 
-					hoverInfo.style.transform = `translateX(${y}%) translateY(${translateYValue})`;
+					hoverInfo.style.transform = `translateX(${x}%) translateY(${translateYValue})`;
 
 					// hoverInfo.style.transform = `translateX(20%) translateY(-20vh)`;
 				} else {
