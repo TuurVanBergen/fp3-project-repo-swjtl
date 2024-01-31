@@ -1,7 +1,7 @@
 import List from "./lists.js";
 let lists;
 let arr = [];
-let arrEquipment = [];
+let arrEquipment = [];   
 let sortedArr = [];
 let UrlJson = ['./JSON/Persons.json', './JSON/equipment.json', './JSON/events.json', './JSON/Theatres.json'];
 async function loadJSON(url) {
