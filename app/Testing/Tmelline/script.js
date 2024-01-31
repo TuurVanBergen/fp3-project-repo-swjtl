@@ -14,7 +14,7 @@ let theatres = [];
 
 let Qlist = ["Q20393", "Q31216", "Q21705", "Q20576", "Q123", "Q266", "Q8754"];
 
-// await getPersonTimelineData();
+await getPersonTimelineData();
 
 // getEquipmentTimelineData();
 // console.log(equiment);
@@ -23,7 +23,7 @@ let Qlist = ["Q20393", "Q31216", "Q21705", "Q20576", "Q123", "Q266", "Q8754"];
 
 // await getTheatreInfo("Q133");
 ///////////////////////////////////
-getTheatresTimelineData();
+// getTheatresTimelineData();
 ////////////////////////////////////
 // need to do the same as persons. create new json file for all data
 
@@ -99,19 +99,24 @@ function getPersonTimelineData() {
 		.catch((error) => console.error("Error fetching the file:", error));
 }
 async function addDatesToPersons() {
+	console.log(persons);
 	for (let p in persons) {
 		let currentObject = await getPersonDate(persons[p].qCode);
-		console.log(currentObject.dateOfBirth);
-		console.log(currentObject.dateOfDeath);
-		console.log(currentObject.description);
+		console.log(currentObject);
 		persons[p].dateOfBirth = currentObject.dateOfBirth;
 		persons[p].dateOfDeath = currentObject.dateOfDeath;
 		persons[p].description = currentObject.description;
+		persons[p].imageLink = currentObject.imageLink;
+
 		console.log(persons[p]);
+		// document.getElementById(
+		// 	"objectMessage"
+		// ).innerHTML += `<img src="${persons[p].imageLink}" width="100px"
+		// height="100px" alt="">`;
 	}
 	console.log(persons); // Make Json file from persons
 	console.log(JSON.stringify(persons));
-	// document.getElementById("jsonString").innerText = JSON.stringify(persons);
+	document.getElementById("jsonString").innerText = JSON.stringify(persons);
 }
 
 async function getEquipmentTimelineData() {
