@@ -644,3 +644,59 @@ footer {
         margin: 0;
     }
 }
+
+#searchResults {
+    border-radius: 10px;
+    background-color: white;
+    color: #380022;
+    width: 33.33%;
+    max-height: 66.66%;
+    min-height: 33.33%;
+    position: fixed;
+    top: 10%;
+    left: 64.41%;
+    z-index: 999;
+    display: none;
+    overflow-y: scroll;
+}
+#searchResults::-webkit-scrollbar {
+
+	background-color: white;
+    width: 20px;
+}
+
+#searchResults::-webkit-scrollbar-track {
+
+	background: #f8e4cc;
+	border: 2px solid #390022;
+
+}
+
+#searchResults::-webkit-scrollbar-thumb {
+
+
+	background: #390022;
+}
+.search-result-item{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #380022
+}
+.search-result-item p{
+width: 100%;
+margin-left: 2.5%;
+margin-top: 1.5%;
+margin-bottom: 0%;
+}
+.search-result-item h4{
+    width: 100%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 0%;
+}
+.search-result-item #desktop-button{
+    margin-left: 2.5%;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+    padding: 10px;
+}
