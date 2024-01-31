@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	// Function to log the row index
 	function logRowIndex(index) {
-		console.log("Mouse is over row:", index);
+		// console.log("Mouse is over row:", index);
 	}
 
 	// Add mouseover event listener to each row in the timeline
@@ -169,8 +169,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	});
 
 	document.addEventListener("mouseover", function (event) {
-		console.log(click);
-
 		let bolElement = event.target.classList.contains("bol") ? event.target : event.target.closest(".bol");
 		if (bolElement) {
 			// Get the first p element within the .bol element

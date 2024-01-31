@@ -2,24 +2,10 @@ import formatDate from "./../../Classes/formatDate.js";
 
 console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
-// let qCode = `Q31216`;
-// let qCode = `Q31755`;
-// let qCode = `Q21705`;
-// let qCode = `Q20576`;
-// let qCode = `Q123`;
-// let qCode = `Q266`;
-// let qCode = `Q8754`;
-// let qCode = `Q4251`;
-// let qCode = `Q12`;
-// let qCode = `Q577`;
-// let qCode = `Q8876`;
-// let qCode = `Q90`;
-// let qCode = `Q91`;
-// let qCode = `Q92`;
-// let qCode = `Q93`;
 
 // getAllInfo(qCode);
 // getAllPersonDates("Q22936");
+
 // returns only dateofbirth and dateofdeath of person
 export async function getPersonDate(qCode) {
 	let personDates = {
@@ -51,6 +37,212 @@ export async function getPersonDate(qCode) {
 	}
 	console.log(personDates);
 	return personDates;
+}
+
+export async function getTheatreInfo(qCode) {
+	console.log("CALLED");
+	let currentObject = {};
+	// ---- Pvalues for Dates ------
+	// P101 buildingDate
+	// P102 openingDate
+	// P103 restorationDate
+	// P104 redevelopmentDate
+	// P105 discoveryDate
+	// P106 burntDownDate
+	// P107 closureDate
+	// P108 demolishedDate
+	try {
+		//fetch data
+		const response = await fetch(setUrl(qCode));
+		const data = await response.json();
+
+		// list op Pvalues linked to qCode
+		let properties = Object.keys(eval(`data.entities.` + qCode + `.claims`));
+
+		// defines name and removes brackets
+		let theatreName = eval(
+			`data.entities.` + qCode + `.labels.en.value`
+		).replace(/\[.*?\]/g, "");
+		currentObject.theatreName = theatreName;
+		console.log(theatreName);
+
+		for (let p in properties) {
+			let info;
+			let length;
+			switch (properties[p]) {
+				case "P101":
+					// console.log("P101 buildingDate FOUND");
+					let buildingDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P101`)) {
+						buildingDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P101[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						buildingDate[i] = info.formatYear(buildingDate[i]);
+					}
+
+					currentObject.buildingDate = buildingDate;
+					// console.log(currentObject.buildingDate);
+
+					break;
+				case "P102":
+					// console.log("P102 openingDate FOUND");
+					let openingDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P102`)) {
+						openingDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P102[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						openingDate[i] = info.formatYear(openingDate[i]);
+					}
+
+					currentObject.openingDate = openingDate;
+					// console.log(currentObject.openingDate);
+
+					break;
+				case "P103":
+					// console.log("P103 restorationDate FOUND");
+					let restorationDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P103`)) {
+						restorationDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P103[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						restorationDate[i] = info.formatYear(restorationDate[i]);
+					}
+
+					currentObject.restorationDate = restorationDate;
+					// console.log(currentObject.restorationDate);
+
+					break;
+				case "P104":
+					// console.log("P104 redevelopmentDate FOUND");
+					let redevelopmentDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P104`)) {
+						redevelopmentDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P104[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						redevelopmentDate[i] = info.formatYear(redevelopmentDate[i]);
+					}
+
+					currentObject.redevelopmentDate = redevelopmentDate;
+					// console.log(currentObject.redevelopmentDate);
+
+					break;
+				case "P105":
+					// console.log("P105 discoveryDate FOUND");
+					let discoveryDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P105`)) {
+						discoveryDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P105[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						discoveryDate[i] = info.formatYear(discoveryDate[i]);
+					}
+
+					currentObject.discoveryDate = discoveryDate;
+					// console.log(currentObject.discoveryDate);
+
+					break;
+				case "P106":
+					// console.log("P106 burntDownDate FOUND");
+					let burntDownDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P106`)) {
+						burntDownDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P106[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						burntDownDate[i] = info.formatYear(burntDownDate[i]);
+					}
+
+					currentObject.burntDownDate = burntDownDate;
+					// console.log(currentObject.burntDownDate);
+
+					break;
+				case "P107":
+					// console.log("P107 closureDate FOUND");
+					let closureDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P107`)) {
+						closureDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P107[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						closureDate[i] = info.formatYear(closureDate[i]);
+					}
+
+					currentObject.closureDate = closureDate;
+					// console.log(currentObject.closureDate);
+
+					break;
+				case "P108":
+					// console.log("P108 demolishedDate FOUND");
+					let demolishedDate = [];
+					for (let i in eval(`data.entities.` + qCode + `.claims.P108`)) {
+						demolishedDate[i] = eval(
+							`data.entities.` +
+								qCode +
+								`.claims.P108[${i}].mainsnak.datavalue.value.time`
+						);
+						info = new formatDate();
+						demolishedDate[i] = info.formatYear(demolishedDate[i]);
+					}
+
+					currentObject.demolishedDate = demolishedDate;
+					// console.log(currentObject.demolishedDate);
+
+					break;
+				case "P2":
+					// console.log("P2 Found!");
+
+					// console.log(properties[p]);
+					console.log(
+						eval(
+							`data.entities.` +
+								qCode +
+								`.claims.` +
+								properties[p] +
+								`[0].mainsnak.datavalue.value`
+						)
+					);
+					let imgPath = eval(
+						`data.entities.` +
+							qCode +
+							`.claims.` +
+							properties[p] +
+							`[0].mainsnak.datavalue.value`
+					);
+					// console.log(imgPath);
+
+					let imageLink = `http://commons.wikimedia.org/wiki/Special:FilePath/${imgPath.replace(
+						/\s/g,
+						""
+					)}`;
+
+					currentObject.imageLink = imageLink;
+					break;
+			}
+		}
+		// console.log(currentObject);
+		return currentObject;
+	} catch {
+		console.error("No Date Found", error);
+	}
+	console.log("ENDED");
 }
 
 export async function getAllInfo(qCode) {
