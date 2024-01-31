@@ -22,12 +22,15 @@ function filterBirthdates(data) {
 	console.log(data);
 	for (let i in data) {
 		if (data[i].dateOfBirth) {
-			filteredPersons.push(data[i]);
+			if (data[i].dateOfBirth > 1200) {
+				filteredPersons.push(data[i]);
+			}
 		}
 	}
 
 	sortBirthdates(filteredPersons);
-	sortBirthdatesZA(filteredPersons);
+	sortedBirhdates.push(data);
+	sortBirthdatesZA([...filteredPersons]);
 }
 
 function sortBirthdates(data) {
@@ -40,18 +43,19 @@ function sortBirthdatesZA(data) {
 	console.log("Sorted Birthdates (Z to A):", data);
 }
 
-function addBol(row, rowNr, color) {
+function addBol(row, rowNr, color, qCode) {
 	const bolInputCorrection = rowNr - 1;
-	console.log(row);
 	const tile = row.children[bolInputCorrection];
 
 	if (!tile.classList.contains("bol")) {
 		tile.classList.add("bol");
+		tile.classList.add(qCode);
 		tile.style.backgroundColor = color;
 		tile.eventCounter = 1;
 	} else {
 		tile.eventCounter += 1;
 		tile.classList.add("bigBol");
+		tile.classList.add(qCode);
 
 		// Check if a p element already exists
 		const existingPElement = tile.querySelector("p");
@@ -77,7 +81,7 @@ async function placeBol() {
 	for (let i = 0; i < filteredPersons.length; i++) {
 		bolInput = roundToDecade(filteredPersons[i].dateOfBirth);
 		bolInput = bolInput / 10 - 120;
-		console.log(bolInput);
+
 		if (bolInput < 0 || bolInput > 100) {
 			alert("bol input moet tussen 0 en 100 liggen");
 			return;
@@ -109,7 +113,7 @@ async function placeBol() {
 				alert("row input moet 1, 2, 3 of 4 zijn");
 		}
 
-		addBol(rowId, bolInput, bolColor);
+		addBol(rowId, bolInput, bolColor, filteredPersons[i].qCode);
 	}
 }
 
