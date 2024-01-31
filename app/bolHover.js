@@ -155,10 +155,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 					const x = slope * ratio + xIntercept;
 
 					hoverInfo.style.transform = `translateX(${x}%) translateY(${translateYValue})`;
+					hoverInfoContainer.style.height = "10px";
 
 					// hoverInfo.style.transform = `translateX(20%) translateY(-20vh)`;
 				} else {
 					hoverInfo.style.top = bolElement.getBoundingClientRect().top + window.scrollY - hoverInfo.clientHeight + "px";
+					hoverInfoContainer.style.height = "min-content";
 				}
 
 				// Append the current hoverInfo element to the container
