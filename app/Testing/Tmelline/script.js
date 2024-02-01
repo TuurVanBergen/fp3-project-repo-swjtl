@@ -50,6 +50,23 @@ async function displayinformation(qCode) {
 	}
 }
 let deathDates = [];
+let newEquipmentList = [];
+await fetch("http://127.0.0.1:5502/app/JSON/equipment.json")
+	.then((response) => response.json())
+	.then((data) => {
+		console.log(data);
+		let currentQList = [];
+		for (let info in data) {
+			let qCode = data[info].item.lastIndexOf("Q");
+			qCode = data[info].item.substring(qCode);
+
+			data[info].qCode = qCode;
+		}
+		document.getElementById("jsonString").innerHTML = `<p>${JSON.stringify(
+			data
+		)}</p>`;
+	})
+	.catch((error) => console.error("Error fetching the file:", error));
 
 // decide what data to use
 function getEventsTimelineData() {
