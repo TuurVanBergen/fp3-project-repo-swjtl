@@ -1,19 +1,11 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
-    console.log(urlParams);
-
-    const qCodeParam = 'qCode';
-    const categoryParam = 'category';
-
-    const qCode = urlParams.get(qCodeParam);
-    const category = urlParams.get(categoryParam);
-
-    console.log('qCode:', qCode);
-    console.log('category:', category);
+    
+    const qCode = urlParams.get('qCode');
+    const category = urlParams.get('category');
 
     changeInfo(qCode, category);
-    // You can also use the category variable as needed in your code.
 });
 
 function changeInfo(qCode, category){
