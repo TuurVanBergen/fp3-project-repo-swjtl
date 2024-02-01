@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// Set the position of the extra div above the iconElement
 			const iconRect = iconElement.getBoundingClientRect();
 			extraDiv.style.position = "absolute";
-			extraDiv.style.top = iconRect.top + window.scrollY - extraDiv.clientHeight + "px"; // Adjusted top position
+			extraDiv.style.top = iconRect.top + window.scrollY - extraDiv.clientHeight - 20 + "px"; // Adjusted top position
 			extraDiv.style.left = iconRect.left + "px";
 		});
 
