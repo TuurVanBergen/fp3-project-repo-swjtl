@@ -1,5 +1,5 @@
 
-let UrlJson = ['./JSON/Persons.json', './JSON/equipment.json', './JSON/events.json', './JSON/Theatres.json'];
+let UrlJson = ['./JSON/finalPersons.json', './JSON/equipment.json', './JSON/events.json', './JSON/Theatres.json'];
 
 let arrPersons = [];
 let arrEquipment = [];
@@ -16,7 +16,7 @@ async function fetchPersons(url) {
 		// const searchData = await response.json();
         // console.log(searchData);
 
-        if(url == './JSON/Persons.json'){
+        if(url == './JSON/finalPersons.json'){
             arrPersons = await response.json();
             console.log("Persons loaded", arrPersons);
         }else if(url == './JSON/equipment.json'){
@@ -83,29 +83,45 @@ UrlJson.forEach(element => {
 
 
 function displaySearchResults(results) {
-    // Clear previous search results
     searchResults.innerHTML = "";
 
-    // Display the current search results
     results.forEach(result => {
+        const qCode = result.qCode;
         const resultItem = document.createElement("div");
         resultItem.classList.add("search-result-item");
-        if (result.name){
+        if (result.name && result.imageLink){
             resultItem.innerHTML = `
-            <img src="${result.img}" alt="">
+            <img src="${result.imageLink}" alt="">
             <h4>${result.name}</h4>
             <p>${result.description}</p>
-            <a href="${result.link}" id="desktop-button">More</a>`;
-        }else if(result.start){
+            <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Person">More</a>`;
+        }else if(result.name && !result.imageLink){
             resultItem.innerHTML = `
+            <h4>${result.name}</h4>
+            <p>${result.description}</p>
+            <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Person">More</a>`;
+        }else if(result.start && result.img_wik){
+            resultItem.innerHTML = `
+            <img src="${result.img_wik}" alt="">
             <h4>${result.itemLabel}</h4>
             <p>${result.start.slice(0,4)}</p>
-            <a href="${result.link}" id="desktop-button">More</a>`;
-        }else if(result.timeline_date){
+            <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Equipment">More</a>`;
+        }else if(result.start && !result.img_wik){
+            resultItem.innerHTML = `
+            <h4>${result.itemLabel}</h4>
+            <p>${result.description}</p>
+            <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Equipment">More</a>`;
+        }else if(result.timeline_date && result.img_wik){
+            resultItem.innerHTML = `
+            <img src="${result.img_wik}" alt="">
+            <h4>${result.itemLabel}</h4>
+            <p>${result.timeline_date.slice(0,4)}</p>
+            <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Event">More</a>`;
+        }else if(result.timeline_date && !result.img_wik){
             resultItem.innerHTML = `
             <h4>${result.itemLabel}</h4>
             <p>${result.timeline_date.slice(0,4)}</p>
-            <a href="${result.link}" id="desktop-button">More</a>`;
+            <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Event">More</a>`;
         }
         // Customize the content to display as needed (e.g., name, description, etc.)
 

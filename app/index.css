@@ -700,3 +700,8 @@ margin-bottom: 0%;
     margin-bottom: 2.5%;
     padding: 10px;
 }
+.search-result-item img{
+width: 60%;
+margin: 0 auto;
+margin-top: 2.5%;
+}
