@@ -1,5 +1,5 @@
 "use strict";
- 
+
 export default class List {
     constructor(name, description, qCode,dateOfBirth,dateOfDeath, category, image) {
         this.name = name;
@@ -12,21 +12,20 @@ export default class List {
     }
     
     get htmlString() {
+    
         if(this.image){
             return `<div class="box">
             <img src="${this.image}" alt="" />
             <h3>${this.name}</h3>
-            <p>${this.description}</p>
-            <a href="objectInfo.html" id="button">More</a>
-        </div>`;
+            <a href="objectInfo.html?qCode=${this.qCode}&category=${this.category}" id="button"">More</a>
+            </div>`;
         }else{
             return `<div class="box">
             <img src="./images/icon-image-not-found-free-vector.jpg" alt="" />
             <h3>${this.name}</h3>
             <p>${this.description}</p>
-            <a href="objectInfo.html" id="button">More</a>
-        </div>`;
+            <a href="objectInfo.html?qCode=${this.qCode}&category=${this.category}" id="button"">More</a>
+            </div>`;
         }
-
     }
 }

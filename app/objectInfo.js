@@ -1,40 +1,68 @@
 "use strict";
-changeInfo();
-function changeInfo(){
-    if(1+1 == 2){
-        fetchTheaters();
-    } else if(1+1 == 34){
-        fetchPersons();
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
+
+    const qCodeParam = 'qCode';
+    const categoryParam = 'category';
+
+    const qCode = urlParams.get(qCodeParam);
+    const category = urlParams.get(categoryParam);
+
+    console.log('qCode:', qCode);
+    console.log('category:', category);
+
+    changeInfo(qCode, category);
+    // You can also use the category variable as needed in your code.
+});
+
+function changeInfo(qCode, category){
+    console.log(qCode);
+    if(category == "Event"){
+        fetchTheaters(qCode);
+    } else if(category == "Person"){
+        fetchPersons(qCode);
     } else {
-        alert("The page that you are looking for does not exist.");
+        console.log("The page that you are looking for does not exist.");
     }
 }
-async function fetchPersons() {
+async function fetchPersons(qCode) {
+    console.log(qCode);
     try {
-        const response = await fetch("./JSON/Persons.json");
+        const response = await fetch("./JSON/updatedPersons.json");
         if (!response.ok) {
             throw new Error(`Failed to load JSON file: ${response.statusText}`);
         }
         const jsonData = await response.json();
         console.log(jsonData);
-        const desiredQCode = "Q20679";
+        const desiredQCode = qCode;
         const personWithQCode = jsonData.find(person => person.qCode === desiredQCode);
 
         if (personWithQCode) {
-            const allInfoText = document.querySelector('.allInfoText');
-            allInfoText.innerHTML = `
-                <div>
-                    <h1>${personWithQCode.dateOfBirth}</h1>
-                    <h2>${personWithQCode.name}</h2>
-                    <div class="basicInfoText">
-                        <h4>${personWithQCode.countryLabel}</h4>
-                        <h4>${personWithQCode.dateOfBirth}-${personWithQCode.dateOfDeath}</h4>
-                    </div>
-                    <p>${personWithQCode.occupationLabel}</p>
-                </div>
-                <h3>Biography</h3>
-                <p>${personWithQCode.description}</p>
-            `;
+            console.log(personWithQCode);
+            window.onload = function() {
+                loadInfo();
+                function loadInfo(){
+                        const allInfoText = document.querySelector('.allInfoText');
+                        allInfoText.innerHTML = `
+                            <div>
+                                <h1>${personWithQCode.dateOfBirth}</h1>
+                                <h2>${personWithQCode.name}</h2>
+                                <div class="basicInfoText">
+                                    <h4>${personWithQCode.countryLabel}</h4>
+                                    <h4>${personWithQCode.dateOfBirth}-${personWithQCode.dateOfDeath}</h4>
+                                </div>
+                                <p>${personWithQCode.occupationLabel}</p>
+                            </div>
+                            <h3>Biography</h3>
+                            <p>${personWithQCode.description}</p>
+                            <div class="image">
+                                <img src="${personWithQCode.imageLink || 'images/icon-image-not-found-free-vector.jpg'}" alt="" />
+                            </div>
+                        `;
+                };
+            }
+           
         } else {
             console.log("Wrong qCode");
         }
@@ -43,8 +71,8 @@ async function fetchPersons() {
     }
 }
 
-
-async function fetchTheaters() {
+async function fetchTheaters(qCode) {
+    console.log(qCode);
     try {
         const response = await fetch("./JSON/TheatresUpdated.json");
         if (!response.ok) {
@@ -53,10 +81,10 @@ async function fetchTheaters() {
         const jsonData = await response.json();
         console.log(jsonData);
 
-        const theaterQCode = "Q16870";
+        const theaterQCode = qCode;
         const theaterInfo = jsonData.find(theater => theater.qCode === theaterQCode);
 
-        if (ptheaterInfo) {
+        if (theaterInfo) {
             const allInfoText = document.querySelector('.allInfoText');
             allInfoText.innerHTML = `
                 <div>

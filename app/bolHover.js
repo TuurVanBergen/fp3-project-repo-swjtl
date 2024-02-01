@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			// Set the position of the extra div above the iconElement
 			const iconRect = iconElement.getBoundingClientRect();
 			extraDiv.style.position = "absolute";
-			extraDiv.style.top = iconRect.top + window.scrollY - extraDiv.clientHeight + "px"; // Adjusted top position
+			extraDiv.style.top = iconRect.top + window.scrollY - extraDiv.clientHeight - 20 + "px"; // Adjusted top position
 			extraDiv.style.left = iconRect.left + "px";
 		});
 
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <h3 class="titleHover">${personName}</h3>
                         <p class="hoverYear">${personDateOfBrith}</p>
                         <p class="hoverType">${PersonDescribsion}</p>
-                        <a id="${qCode}" href="./objectinfo.html">More</a>
+                        <a id="${qCode}" href="./objectinfo.html?qCode=${qCode}&category=Person">More</a>
                     </div>
                 `;
 				}
