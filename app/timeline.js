@@ -1,9 +1,85 @@
 let filteredPersons = [];
 let sortedBirhdates = [];
+let filteredTheaters = [];
+let filteredGear = [];
+let filteredEvents = [];
 let rowInput;
 let rowId;
 let bolInput;
 let bolColor;
+
+async function fetchEvents() {
+	try {
+		const response = await fetch("./JSON/Events.json");
+		if (!response.ok) {
+			throw new Error(`Failed to load JSON file: ${response.statusText}`);
+		}
+		const jsonData = await response.json();
+		filterEventsDates(jsonData);
+	} catch (error) {
+		console.error("Error loading JSON file:", error);
+	}
+}
+
+function filterEventsDates(data) {
+	for (let i in data) {
+		if (data[i].timeline_date) {
+			if (data[i].timeline_date > 1200) {
+				data[i].timeline_date = data[i].timeline_date.slice(0, 4);
+				filteredEvents.push(data[i]);
+			}
+		}
+	}
+}
+
+async function fetchGear() {
+	try {
+		const response = await fetch("./JSON/equipment.json");
+		if (!response.ok) {
+			throw new Error(`Failed to load JSON file: ${response.statusText}`);
+		}
+		const jsonData = await response.json();
+		filterGearDates(jsonData);
+	} catch (error) {
+		console.error("Error loading JSON file:", error);
+	}
+}
+
+function filterGearDates(data) {
+	for (let i in data) {
+		if (data[i].start) {
+			data[i].start = data[i].start.substring(0, 4);
+			if (data[i].start > 1200) {
+				filteredGear.push(data[i]);
+			}
+		}
+	}
+	console.log(filteredGear);
+}
+
+async function fetchTheater() {
+	try {
+		const response = await fetch("./JSON/TheatresUpdated.json");
+		if (!response.ok) {
+			throw new Error(`Failed to load JSON file: ${response.statusText}`);
+		}
+		const jsonData = await response.json();
+		filterTheaterDates(jsonData);
+	} catch (error) {
+		console.error("Error loading JSON file:", error);
+	}
+}
+
+function filterTheaterDates(data) {
+	for (let i in data) {
+		if (data[i].openingDate && data[i].continentLabel != "Europe") {
+			if (data[i].openingDate > 1200) {
+				filteredTheaters.push(data[i]);
+			}
+		}
+	}
+
+}
 
 async function fetchPersons() {
 	try {
@@ -35,7 +111,7 @@ function filterBirthdates(data) {
 
 function sortBirthdates(data) {
 	data.sort((a, b) => a.dateOfBirth - b.dateOfBirth);
-	console.log("Sorted Birthdates (A to Z):", data);
+	// console.log("Sorted Birthdates (A to Z):", data);
 }
 
 function sortBirthdatesZA(data) {
@@ -75,7 +151,11 @@ function roundToDecade(year) {
 }
 
 async function placeAllBol() {
+	let array;
 	await fetchPersons();
+	await fetchTheater();
+	await fetchGear();
+	await fetchEvents();
 
 	rowInput = 1;
 	for (let i = 0; i < filteredPersons.length; i++) {
@@ -87,33 +167,58 @@ async function placeAllBol() {
 			return;
 		}
 
-		switch (true) {
-			case rowInput == 1:
-				bolColor = "#E6BB45";
-				rowId = _1stRow;
-				break;
-
-			case rowInput == 2:
-				bolColor = "#FF65C1";
-				rowId = _2thRow;
-				break;
-
-			case rowInput == 3:
-				bolColor = "#CE1644";
-				rowId = _3thRow;
-				break;
-
-			case rowInput == 4:
-				bolColor = "#FFCB91";
-				rowId = _4thRow;
-				break;
-
-			default:
-				console.log("default");
-				alert("row input moet 1, 2, 3 of 4 zijn");
-		}
+		bolColor = "#E6BB45";
+		rowId = _1stRow;
 
 		addBol(rowId, bolInput, bolColor, filteredPersons[i].qCode);
+	}
+
+	rowInput = 2;
+	for (let i = 0; i < filteredTheaters.length; i++) {
+		bolInput = roundToDecade(filteredTheaters[i].openingDate);
+		bolInput = bolInput / 10 - 120;
+
+		if (bolInput < 0 || bolInput > 100) {
+			alert("bol input moet tussen 0 en 100 liggen");
+			return;
+		}
+
+		bolColor = "#FF65C1";
+		rowId = _2thRow;
+
+		addBol(rowId, bolInput, bolColor, filteredTheaters[i].qCode);
+	}
+
+	rowInput = 3;
+	for (let i = 0; i < filteredGear.length; i++) {
+		bolInput = roundToDecade(filteredGear[i].start);
+		bolInput = bolInput / 10 - 120;
+
+		if (bolInput < 0 || bolInput > 100) {
+			alert("bol input moet tussen 0 en 100 liggen");
+			return;
+		}
+
+		bolColor = "#ce1644";
+		rowId = _3thRow;
+
+		addBol(rowId, bolInput, bolColor, filteredGear[i].qCode);
+	}
+
+	rowInput = 4;
+	for (let i = 0; i < filteredEvents.length; i++) {
+		bolInput = roundToDecade(filteredEvents[i].timeline_date);
+		bolInput = bolInput / 10 - 120;
+
+		if (bolInput < 0 || bolInput > 100) {
+			alert("bol input moet tussen 0 en 100 liggen");
+			return;
+		}
+
+		bolColor = "#ffcb91";
+		rowId = _4thRow;
+
+		addBol(rowId, bolInput, bolColor, filteredEvents[i].qCode);
 	}
 }
 

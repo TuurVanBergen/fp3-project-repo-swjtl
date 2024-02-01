@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	document.addEventListener("mouseover", function (event) {
 		let bolElement = event.target.classList.contains("bol") ? event.target : event.target.closest(".bol");
 		if (bolElement) {
-			console.log(filteredPersons);
 
 			// Get the first p element within the .bol element
 			let pElement = bolElement.querySelector("p");
@@ -115,18 +114,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 				let hoverInfo = document.createElement("div");
 				if (bolElement.classList[i].startsWith("Q")) {
-					console.log(bolElement.classList[i]);
 
 					let qCode = bolElement.classList[i];
+					console.log(qCode);
 					for (let i = 0; i < filteredPersons.length; i++) {
 						hoverInfo.classList.add("hoverInfo");
 						if (qCode == filteredPersons[i].qCode) {
 							personName = filteredPersons[i].name;
-							console.log("personName " + personName);
 							personDateOfBrith = filteredPersons[i].dateOfBirth;
 							PersonDescribsion = filteredPersons[i].description;
+						} 
+					}
+
+					for (let i = 0; i < filteredTheaters.length; i++) {
+						hoverInfo.classList.add("hoverInfo");
+						if (qCode == filteredTheaters[i].qCode) {
+							personName = filteredTheaters[i].theatreName;
+							personDateOfBrith = filteredTheaters[i].openingDate;
+							PersonDescribsion = filteredTheaters[i].countryLabel;
 						}
 					}
+
+					// for (let i = 0; i < filteredGear.length; i++) {
+					// 	hoverInfo.classList.add("hoverInfo");
+					// 	if (qCode == filteredGear[i].qCode) {
+					// 		personName = filteredGear[i].propLabel;
+					// 		personDateOfBrith = filteredGear[i].start;
+					// 		PersonDescribsion = filteredGear[i].itemLabel;
+					// 	}
+					// }
+
+					// for (let i = 0; i < filteredEvents.length; i++) {
+					// 	hoverInfo.classList.add("hoverInfo");
+					// 	if (qCode == filteredEvents[i].qCode) {
+					// 		personName = filteredEvents[i].itemLabel;
+					// 		personDateOfBrith = filteredEvents[i].timeline_date;
+					// 		PersonDescribsion = filteredEvents[i].pLabel;
+					// 	}
+					// }
+
+					
 					hoverInfo.innerHTML = `
                     <div class="hoverInfoList">
                         <h3 class="titleHover">${personName}</h3>

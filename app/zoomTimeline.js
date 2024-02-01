@@ -4,6 +4,8 @@ let centuryNr;
 let centuryValue;
 let qCodesToShow = [];
 let personsToShow = [];
+let theatersToShow = [];
+let theatersQCodes = [];
 
 centuryElements.forEach(function (centuryElement) {
 	centuryElement.addEventListener("click", function () {
@@ -13,7 +15,6 @@ centuryElements.forEach(function (centuryElement) {
 		}
 		dateOfBirth = centuryValue.slice(0, 4);
 		dateOfDeath = centuryValue.slice(5);
-		console.log(dateOfBirth);
 		determineQCodes(dateOfBirth);
 	});
 });
@@ -37,8 +38,15 @@ function determineQCodes(dateOfBirth) {
 				qCodesToShow.push(classList[j]);
 			}
 		}
+
+		let row2 = document.querySelector("#_2thRow");
+		let classList2 = row2.children[i].classList;
+		for (let j in classList2) {
+			if (classList2[j].toString().startsWith("Q")) {
+				theatersQCodes.push(classList2[j]);
+			}
+		}
 	}
-	console.log("qCodesToShow" + qCodesToShow);
 	determinePersonsToShow();
 	placeBol();
 }
@@ -50,7 +58,11 @@ function determinePersonsToShow() {
 			personsToShow.push(filteredPersons[i]);
 		}
 	}
-	console.log("personToShow: " + personsToShow);
+	for (let i = 0; i < filteredTheaters.length; i++) {
+		if (theatersQCodes.includes(filteredTheaters[i].qCode)) {
+			theatersToShow.push(filteredTheaters[i]);
+		}
+	}
 }
 
 function clearTimeline() {
@@ -67,46 +79,54 @@ function clearTimeline() {
 	for (let i = 0; i < 100; i++) {
 		document.querySelector("#_1stRow").insertAdjacentHTML("beforeend", `<div class="grid-tile"></div>`);
 	}
+
+	document.querySelector("#_2thRow").innerHTML = "";
+	for (let i = 0; i < 100; i++) {
+		document.querySelector("#_2thRow").insertAdjacentHTML("beforeend", `<div class="grid-tile"></div>`);
+	}
+
+	document.querySelector("#_3thRow").innerHTML = "";
+	for (let i = 0; i < 100; i++) {
+		document.querySelector("#_3thRow").insertAdjacentHTML("beforeend", `<div class="grid-tile"></div>`);
+	}
+
+	document.querySelector("#_4thRow").innerHTML = "";
+	for (let i = 0; i < 100; i++) {
+		document.querySelector("#_4thRow").insertAdjacentHTML("beforeend", `<div class="grid-tile"></div>`);
+	}
 }
 
 function placeBol() {
+	clearTimeline();
+
 	rowInput = 1;
-	clearTimeline(rowId);
 	for (let i = 0; i < personsToShow.length; i++) {
 		bolInput = personsToShow[i].dateOfBirth - dateOfBirth;
 
 		if (bolInput < 0 || bolInput > 100) {
-			console.log("personsToShow dateOfBirth: " + personsToShow[i].dateOfBirth);
-			console.log("wrong bolInput" + bolInput);
 			alert("bol input moet tussen 0 en 100 liggen");
 			return;
 		}
 
-		switch (true) {
-			case rowInput == 1:
-				bolColor = "#E6BB45";
-				rowId = _1stRow;
-				break;
+		bolColor = "#E6BB45";
+		rowId = _1stRow;
+		
+		console.log("bolinput: " + bolInput);
+		addBol(rowId, bolInput, bolColor, personsToShow[i].qCode);
+	}
 
-			case rowInput == 2:
-				bolColor = "#FF65C1";
-				rowId = _2thRow;
-				break;
+	rowInput = 2;
+	for (let i = 0; i < theatersToShow.length; i++) {
+		bolInput = theatersToShow[i].openingDate - dateOfBirth;
 
-			case rowInput == 3:
-				bolColor = "#CE1644";
-				rowId = _3thRow;
-				break;
-
-			case rowInput == 4:
-				bolColor = "#FFCB91";
-				rowId = _4thRow;
-				break;
-
-			default:
-				console.log("default");
-				alert("row input moet 1, 2, 3 of 4 zijn");
+		if (bolInput < 0 || bolInput > 100) {
+			alert("bol input moet tussen 0 en 100 liggen");
+			return;
 		}
+
+		bolColor = "#FF65C1";
+		rowId = _2thRow;
+		
 		console.log("bolinput: " + bolInput);
 		addBol(rowId, bolInput, bolColor, personsToShow[i].qCode);
 	}
