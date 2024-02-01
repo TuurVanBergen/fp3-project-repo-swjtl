@@ -92,6 +92,7 @@ function displaySearchResults(results) {
         resultItem.classList.add("search-result-item");
         if (result.name){
             resultItem.innerHTML = `
+            <img src="${result.img}" alt="">
             <h4>${result.name}</h4>
             <p>${result.description}</p>
             <a href="${result.link}" id="desktop-button">More</a>`;
