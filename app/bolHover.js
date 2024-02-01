@@ -138,9 +138,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 					for (let i = 0; i < filteredGear.length; i++) {
 						hoverInfo.classList.add("hoverInfo");
 						if (qCode == filteredGear[i].qCode) {
-							personName = filteredGear[i].propLabel;
+							personName = filteredGear[i].itemLabel;
 							personDateOfBrith = filteredGear[i].start;
-							PersonDescribsion = filteredGear[i].itemLabel;
+							PersonDescribsion = filteredGear[i].propLabel;
 						}
 					}
 
