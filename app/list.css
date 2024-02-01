@@ -85,7 +85,7 @@ header {
 	justify-content: space-between;
 }
 .box {
-	width: 18%;
+	width: 17%;
 	padding: 30px;
 	background-color: #380022;
 	margin-bottom: 10px;
@@ -98,6 +98,9 @@ header {
 	object-fit: contain;
 }
 #button {
+	margin-top: 1.5%;
+	margin-bottom: 2.5%;
+	margin-left: 2.5%;
 	color: #f6d4ac;
 	background-color: #ce0236;
 	text-decoration: none;
@@ -233,4 +236,60 @@ footer {
     .contact{
         margin: 0;
     }
+}
+
+#searchResults {
+    border-radius: 10px;
+    background-color: #380022;
+    color: white;
+    width: 33.33%;
+    max-height: 66.66%;
+    min-height: 33.33%;
+    position: fixed;
+    top: 10%;
+    left: 64.41%;
+    z-index: 999;
+    display: none;
+    overflow-y: scroll;
+}
+#searchResults::-webkit-scrollbar {
+	background-color: #f8e4cc;
+    width: 20px;
+}
+
+#searchResults::-webkit-scrollbar-track {
+	background: white;
+	border: 2px solid #390022;
+}
+
+#searchResults::-webkit-scrollbar-thumb {
+	background: #ce1644;
+}
+.search-result-item{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid white;
+}
+.search-result-item p{
+width: 100%;
+margin-left: 2.5%;
+margin-top: 1.5%;
+margin-bottom: 0%;
+}
+.search-result-item h4{
+    width: 100%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 0%;
+}
+.search-result-item #desktop-button{
+    margin-left: 2.5%;
+    margin-top: 1.5%;
+    margin-bottom: 2.5%;
+    padding: 10px;
+}
+.search-result-item img{
+width: 60%;
+margin: 0 auto;
+margin-top: 2.5%;
 }
