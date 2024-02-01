@@ -19,7 +19,7 @@ async function fetchPersons() {
 }
 
 function filterBirthdates(data) {
-	console.log(data);
+	// console.log(data);
 	for (let i in data) {
 		if (data[i].dateOfBirth) {
 			if (data[i].dateOfBirth > 1200) {
@@ -40,7 +40,7 @@ function sortBirthdates(data) {
 
 function sortBirthdatesZA(data) {
 	data.sort((a, b) => b.dateOfBirth - a.dateOfBirth);
-	console.log("Sorted Birthdates (Z to A):", data);
+	// console.log("Sorted Birthdates (Z to A):", data);
 }
 
 function addBol(row, rowNr, color, qCode) {
@@ -74,7 +74,7 @@ function roundToDecade(year) {
 	return Math.round(year / 10) * 10;
 }
 
-async function placeBol() {
+async function placeAllBol() {
 	await fetchPersons();
 
 	rowInput = 1;
@@ -117,4 +117,4 @@ async function placeBol() {
 	}
 }
 
-placeBol();
+placeAllBol();

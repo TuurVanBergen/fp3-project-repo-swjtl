@@ -10,7 +10,7 @@
 
 		<script src="bolHover.js" defer></script>
 		<script src="dropdown.js" defer></script>
-		<script src="timeline.js"></script>
+		<script src="timeline.js" defer></script>
 		<script src="zoomTimeline.js" defer></script>
 	</head>
 	<body>
@@ -62,15 +62,6 @@
 					<a class="century" href="#">2000-2100</a>
 				</div>
 			</div>
-			<div class="dropdown">
-				<button onclick="Sort()" class="dropbtn">Sort <strong>&#8744;</strong></button>
-				<div id="dropdownSort" class="dropdown-content">
-					<a href="#">Persons</a>
-					<a href="#">Theaters</a>
-					<a href="#">Gear</a>
-					<a href="#">Events</a>
-				</div>
-			</div>
 		</div>
 
 		<div id="timeline-container">
@@ -81,16 +72,16 @@
 				<tr id="yearRow">
 					<td></td>
 					<td></td>
-					<th>1200</th>
-					<th>1300</th>
-					<th>1400</th>
-					<th>1500</th>
-					<th>1600</th>
-					<th>1700</th>
-					<th>1800</th>
-					<th>1900</th>
-					<th>2000</th>
-					<th>2100</th>
+					<th id="startYear">1200</th>
+					<th class="middelYear">1300</th>
+					<th class="middelYear">1400</th>
+					<th class="middelYear">1500</th>
+					<th class="middelYear">1600</th>
+					<th class="middelYear">1700</th>
+					<th class="middelYear">1800</th>
+					<th class="middelYear">1900</th>
+					<th class="middelYear">2000</th>
+					<th id="endYear">2100</th>
 				</tr>
 				<tr id="padding_yearRow">
 					<th></th>
