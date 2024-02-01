@@ -1,39 +1,17 @@
-<<<<<<< HEAD
-let UrlJson = ["./JSON/Persons.json", "./JSON/equipment.json", "./JSON/events.json", "./JSON/Theatres.json"];
-=======
-
 let UrlJson = ['./JSON/finalPersons.json', './JSON/equipment.json', './JSON/events.json', './JSON/Theatres.json'];
->>>>>>> 41ac031680e1b6922cf7f756461821087fde5126
-
+ 
 let arrPersons = [];
 let arrEquipment = [];
 let arrEvents = [];
 let arrTheatres = [];
-
+ 
 async function fetchPersons(url) {
-	try {
-		const response = await fetch(url);
-		if (!response.ok) {
-			throw new Error(`Failed to load JSON file: ${response.statusText}`);
-		}
-<<<<<<< HEAD
-		const searchData = await response.json();
-		// console.log(searchData);
-
-		const searchBar = document.getElementById("searchBar");
-		const searchResultsContainer = document.getElementById("searchResults");
-
-		// Add an event listener to the search input
-		searchBar.addEventListener("input", function () {
-			// Get the value of the search input
-			const searchTerm = searchBar.value.toLowerCase();
-			if (searchTerm.length > 0) {
-				searchResultsContainer.style.display = "block";
-			} else {
-				searchResultsContainer.style.display = "none";
-			}
-=======
-
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to load JSON file: ${response.statusText}`);
+        }
+ 
         if(url == './JSON/finalPersons.json'){
             arrPersons = await response.json();
             console.log("Persons loaded", arrPersons);
@@ -47,8 +25,8 @@ async function fetchPersons(url) {
             arrTheatres = await response.json();
             console.log("Theatres loaded", arrTheatres);
         }
-
-        const searchBar = document.getElementById("searchBar"); 
+ 
+        const searchBar = document.getElementById("searchBar");
         const searchResultsContainer = document.getElementById("searchResults");
         
         // Add an event listener to the search input
@@ -60,7 +38,7 @@ async function fetchPersons(url) {
             } else {
                     searchResultsContainer.style.display = "none";
                 }
-
+ 
                 const filteredPersons = arrPersons.filter(item => (
                     (item.name && item.name.toLowerCase().includes(searchTerm)) ||
                     (item.description && item.description.toLowerCase().includes(searchTerm))
@@ -85,40 +63,21 @@ let filteredData = [...filteredEquipment, ...filteredEvents, ...filteredTheatres
 console.log(filteredData);
              displaySearchResults(filteredData);
         });
->>>>>>> 41ac031680e1b6922cf7f756461821087fde5126
-
-			// Filter the data based on the search term
-			const filteredData = searchData.filter((item) => item.name.toLowerCase().includes(searchTerm) || item.description.toLowerCase().includes(searchTerm));
-			// Display the filtered results
-			console.log(filteredData);
-			displaySearchResults(filteredData);
-		});
-	} catch (error) {
-		console.error("Error loading JSON file:", error);
-	}
+ 
+    } catch (error) {
+        console.error("Error loading JSON file:", error);
+    }
 }
-
+ 
 UrlJson.forEach(element => {
     fetchPersons(element);
 });
-
-
-
+ 
+ 
+ 
 function displaySearchResults(results) {
-<<<<<<< HEAD
-	// Clear previous search results
-	searchResults.innerHTML = "";
-
-	// Display the current search results
-	results.forEach((result) => {
-		const resultItem = document.createElement("div");
-		resultItem.classList.add("search-result-item");
-
-		// Customize the content to display as needed (e.g., name, description, etc.)
-		resultItem.innerHTML = `
-=======
     searchResults.innerHTML = "";
-
+ 
     results.forEach(result => {
         const qCode = result.qCode;
         const resultItem = document.createElement("div");
@@ -126,7 +85,6 @@ function displaySearchResults(results) {
         if (result.name && result.imageLink){
             resultItem.innerHTML = `
             <img src="${result.imageLink}" alt="">
->>>>>>> 41ac031680e1b6922cf7f756461821087fde5126
             <h4>${result.name}</h4>
             <p>${result.description}</p>
             <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Person">More</a>`;
@@ -158,12 +116,7 @@ function displaySearchResults(results) {
             <p>${result.timeline_date.slice(0,4)}</p>
             <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Event">More</a>`;
         }
-
-<<<<<<< HEAD
-		searchResults.appendChild(resultItem);
-	});
-}
-=======
+ 
         searchResults.appendChild(resultItem);
     });
     const middleYearElements = document.querySelectorAll(".search-result-item");
@@ -174,4 +127,3 @@ function displaySearchResults(results) {
         }
     });
 }
->>>>>>> 41ac031680e1b6922cf7f756461821087fde5126
