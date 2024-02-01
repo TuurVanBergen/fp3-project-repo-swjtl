@@ -1,6 +1,7 @@
 import formatDate from "./../../Classes/formatDate.js";
 import {
 	getAllInfo,
+	getDeathDate,
 	getPersonDate,
 	getTheatreInfo,
 } from "../QueryTest/script.js";
@@ -14,8 +15,8 @@ let theatres = [];
 
 let Qlist = ["Q20393", "Q31216", "Q21705", "Q20576", "Q123", "Q266", "Q8754"];
 
-await getPersonTimelineData();
-
+// await getPersonTimelineData();
+// await addDeathDates();
 // getEquipmentTimelineData();
 // console.log(equiment);
 
@@ -48,6 +49,7 @@ async function displayinformation(qCode) {
 		return currentObject;
 	}
 }
+let deathDates = [];
 
 // decide what data to use
 function getEventsTimelineData() {
@@ -72,6 +74,78 @@ function getEventsTimelineData() {
 		});
 }
 
+await fetch("http://127.0.0.1:5502/app/JSON/finalPersons.json")
+	.then((response) => response.json())
+	.then((data) => {
+		console.log(data);
+	})
+	.catch((error) => console.error("Error fetching the file:", error));
+async function addDeathDates() {
+	// save list of people local fetch
+	// for every item fetch deathdate
+	let dateOfDeathList = [];
+	let incompleteList = [];
+	let completeList = [];
+
+	await fetch("http://127.0.0.1:5502/app/JSON/updatedPersons.json")
+		.then((response) => response.json())
+		.then((data) => {
+			for (let info in data) {
+				let currentObject = {};
+				currentObject.name = data[info].name;
+				currentObject.qCode = data[info].qCode;
+				currentObject.occupationLabel = data[info].occupationLabel;
+				currentObject.countryLabel = data[info].countryLabel;
+				currentObject.dateOfBirth = data[info].dateOfBirth;
+				currentObject.description = data[info].description;
+				currentObject.imageLink = data[info].imageLink;
+
+				incompleteList.push(currentObject);
+			}
+
+			console.log(incompleteList);
+		})
+		.catch((error) => console.error("Error fetching the file:", error));
+
+	// persons.deathdate => updatedPersons.deathdate
+	await fetch("http://127.0.0.1:5502/app/JSON/Persons.json")
+		.then((response) => response.json())
+		.then((data) => {
+			for (let info in data) {
+				let currentObject = {};
+				currentObject.name = data[info].name;
+				currentObject.qCode = data[info].qCode;
+				currentObject.occupationLabel = data[info].occupationLabel;
+				currentObject.countryLabel = data[info].countryLabel;
+				currentObject.description = data[info].description;
+				currentObject.dateOfBirth = data[info].dateOfBirth;
+				currentObject.dateOfDeath = data[info].dateOfDeath;
+
+				dateOfDeathList.push(currentObject);
+			}
+			console.log(dateOfDeathList);
+		})
+		.then(() => {})
+		.catch((error) => console.error("Error fetching the file:", error));
+
+	console.log(dateOfDeathList.length);
+	for (let i = 0; i < dateOfDeathList.length; i++) {
+		console.log(i);
+
+		incompleteList[i].dateOfDeath = dateOfDeathList[i].dateOfDeath;
+	}
+	console.log(incompleteList);
+
+	document.getElementById("jsonString").innerHTML = `<p>${JSON.stringify(
+		incompleteList
+	)}</p>`;
+}
+async function fetchDeathDates(qCode) {
+	let deathDate = await getDeathDate(qCode);
+	console.log(deathDate);
+	return deathDate;
+}
+
 function getPersonTimelineData() {
 	fetch("http://127.0.0.1:5502/app/JSON/PersonsByOccupation.json")
 		.then((response) => response.json())
@@ -91,8 +165,6 @@ function getPersonTimelineData() {
 				let cardInfo = { name, qCode, occupationLabel, countryLabel };
 				persons.push(cardInfo);
 			}
-			// add birth and death data to persons objects
-			// returns birth an death of person with q code
 
 			addDatesToPersons();
 		})
@@ -105,6 +177,7 @@ async function addDatesToPersons() {
 		console.log(currentObject);
 		persons[p].dateOfBirth = currentObject.dateOfBirth;
 		persons[p].dateOfDeath = currentObject.dateOfDeath;
+		console.log(persons[p].dateOfDeath);
 		persons[p].description = currentObject.description;
 		persons[p].imageLink = currentObject.imageLink;
 

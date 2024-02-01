@@ -7,6 +7,9 @@ console.log("Querytest");
 // getPersonDate("Q31755");
 
 // returns only dateofbirth and dateofdeath of person
+
+export async function getDeathDate(Qcode) {}
+
 export async function getPersonDate(qCode) {
 	let personDates = {};
 	try {
@@ -35,6 +38,7 @@ export async function getPersonDate(qCode) {
 					`.claims.P31[0].mainsnak.datavalue.value.time`
 			);
 			dateOfDeath = dateString.formatYear(dateOfDeath);
+			console.log(dateOfDeath);
 
 			personDates.dateOfDeath = dateOfDeath;
 		} catch {
