@@ -6,6 +6,10 @@ let qCodesToShow = [];
 let personsToShow = [];
 let theatersToShow = [];
 let theatersQCodes = [];
+let gearToShow = [];
+let gearQCodes = [];
+let eventsToShow = [];
+let evetnsQCodes = [];
 
 centuryElements.forEach(function (centuryElement) {
 	centuryElement.addEventListener("click", function () {
@@ -46,6 +50,22 @@ function determineQCodes(dateOfBirth) {
 				theatersQCodes.push(classList2[j]);
 			}
 		}
+
+		let row3 = document.querySelector("#_3thRow");
+		let classList3 = row3.children[i].classList;
+		for (let j in classList3) {
+			if (classList3[j].toString().startsWith("Q")) {
+				gearQCodesQCodes.push(classList3[j]);
+			}
+		}
+
+		let row4 = document.querySelector("#_4thRow");
+		let classList4 = row4.children[i].classList;
+		for (let j in classList4) {
+			if (classList4[j].toString().startsWith("Q")) {
+				evetnsQCodes.push(classList4[j]);
+			}
+		}
 	}
 	determinePersonsToShow();
 	placeBol();
@@ -61,6 +81,16 @@ function determinePersonsToShow() {
 	for (let i = 0; i < filteredTheaters.length; i++) {
 		if (theatersQCodes.includes(filteredTheaters[i].qCode)) {
 			theatersToShow.push(filteredTheaters[i]);
+		}
+	}
+	for (let i = 0; i < filteredGear.length; i++) {
+		if (gearQCodes.includes(filteredGear[i].qCode)) {
+			gearToShowToShow.push(filteredGear[i]);
+		}
+	}
+	for (let i = 0; i < filteredEvents.length; i++) {
+		if (evetnsQCodes.includes(filteredEvents[i].qCode)) {
+			eventsToShow.push(filteredEvents[i]);
 		}
 	}
 }
@@ -129,5 +159,37 @@ function placeBol() {
 		
 		console.log("bolinput: " + bolInput);
 		addBol(rowId, bolInput, bolColor, personsToShow[i].qCode);
+	}
+
+	rowInput = 3;
+	for (let i = 0; i < gearToShow.length; i++) {
+		bolInput = gearToShow[i].start - dateOfBirth;
+
+		if (bolInput < 0 || bolInput > 100) {
+			alert("bol input moet tussen 0 en 100 liggen");
+			return;
+		}
+
+		bolColor = "#ce1644";
+		rowId = _3thRow;
+		
+		console.log("bolinput: " + bolInput);
+		addBol(rowId, bolInput, bolColor, gearToShow[i].qCode);
+	}
+
+	rowInput = 4;
+	for (let i = 0; i < eventsToShow.length; i++) {
+		bolInput = eventsToShow[i].timeline_date - dateOfBirth;
+
+		if (bolInput < 0 || bolInput > 100) {
+			alert("bol input moet tussen 0 en 100 liggen");
+			return;
+		}
+
+		bolColor = "#ce1644";
+		rowId = _4thRow;
+		
+		console.log("bolinput: " + bolInput);
+		addBol(rowId, bolInput, bolColor, eventsToShow[i].qCode);
 	}
 }

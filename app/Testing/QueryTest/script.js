@@ -3,10 +3,14 @@ import formatDate from "./../../Classes/formatDate.js";
 console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
 
-// getAllInfo(qCode);
-// getPersonDate("Q31755");
+// -----Display info on infopage ----------------
+displayInfoPage(await getAllInfo("Q10040"));
+// ----------------------------------------------
 
-// returns only dateofbirth and dateofdeath of person
+// returns only dateofdeath of person
+export async function getDeathDate(Qcode) {}
+
+// getPersonDate("Q31755");
 export async function getPersonDate(qCode) {
 	let personDates = {};
 	try {
@@ -35,6 +39,7 @@ export async function getPersonDate(qCode) {
 					`.claims.P31[0].mainsnak.datavalue.value.time`
 			);
 			dateOfDeath = dateString.formatYear(dateOfDeath);
+			console.log(dateOfDeath);
 
 			personDates.dateOfDeath = dateOfDeath;
 		} catch {
@@ -286,7 +291,7 @@ export async function getAllInfo(qCode) {
 		let description;
 
 		if (
-			eval(`data.entities.` + qCode + `.labels.en.descriptions`) === undefined
+			eval(`data.entities.` + qCode + `.descriptions.en.value`) === undefined
 		) {
 			label = eval(`data.entities.` + qCode + `.labels.en.value`);
 			description = undefined;
@@ -311,15 +316,48 @@ export async function getAllInfo(qCode) {
 
 	return currentObject;
 }
+function displayInfoPage(currentObject) {
+	// logs/appends values based on what properties are present
+	for (let i in Object.keys(currentObject)) {
+		console.log(i);
 
+		let currentProperty = Object.keys(currentObject)[i];
+		console.log(currentProperty);
+		let currentValue = eval(`currentObject.${Object.keys(currentObject)[i]}`);
+
+		switch (currentProperty) {
+			case "img":
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty}</h3> <img src="${currentValue}" width="200px"  height="200px"></img><br>`;
+				break;
+			case "sourceUrl":
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty}<a href="${currentValue}"><h3>${currentValue}</h3></a></h3><br>`;
+				break;
+			case "wikiDataSource":
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty}<a href="${currentValue}"><h3>${currentValue}</h3></a></h3><br>`;
+				break;
+			default:
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty} : ${currentValue}</h3><br>`;
+		}
+	}
+}
 function setUrl(qCode) {
 	let url = `https://canonbase.eu/w/api.php?action=wbgetentities&ids=${qCode}&languages=en%7Cde%7Cfr&format=json&origin=*`;
 	return url;
 }
 async function fetchInfo(properties, data, qCode) {
+	console.log("fetchinfo called");
 	let i = 0;
 	let temp = qCode;
 	let currentObject = {};
+
 	for (let property of properties) {
 		qCode = temp;
 		i++;
@@ -327,6 +365,7 @@ async function fetchInfo(properties, data, qCode) {
 		// adds properties to object;
 		if (property === "P2") {
 			// image
+			console.log("image");
 			let currentProperty =
 				`data.entities.` +
 				qCode +
@@ -344,6 +383,7 @@ async function fetchInfo(properties, data, qCode) {
 					`[0].mainsnak.datavalue.value`
 			)}`;
 		} else if (property === "P16") {
+			console.log("wikidata found");
 			// Wikidata source
 			let currentProperty =
 				`data.entities.` +
@@ -375,21 +415,25 @@ async function fetchInfo(properties, data, qCode) {
 
 			switch (property) {
 				case "P111":
+					console.log("First use date found");
 					// First use date
 					currentObject.firstUseDate = currentProperty;
 
 					break;
 				case "P102":
+					console.log("Opening Date found");
 					// Opening Date
 					currentObject.openingDate = currentProperty;
 
 					break;
 				case "P30":
+					console.log("Date of Birth found");
 					// Date of Birth
 					currentObject.dateOfBirth = currentProperty;
 
 					break;
 				case "P31":
+					console.log("Date of Death found");
 					// Date of Death
 					currentObject.dateOfDeath = currentProperty;
 
@@ -445,7 +489,6 @@ async function fetchInfo(properties, data, qCode) {
 			.then((data) => {
 				// console.log(`Appending ${qCode} statement to html `);
 				let pValue = eval(`data.entities.${qCode}.labels.en.value`);
-
 				if (property === "P11") {
 					//type of information
 					currentObject.typeOfInformation = pValue;

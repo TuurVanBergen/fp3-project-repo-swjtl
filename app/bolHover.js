@@ -135,23 +135,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
 						}
 					}
 
-					// for (let i = 0; i < filteredGear.length; i++) {
-					// 	hoverInfo.classList.add("hoverInfo");
-					// 	if (qCode == filteredGear[i].qCode) {
-					// 		personName = filteredGear[i].propLabel;
-					// 		personDateOfBrith = filteredGear[i].start;
-					// 		PersonDescribsion = filteredGear[i].itemLabel;
-					// 	}
-					// }
+					for (let i = 0; i < filteredGear.length; i++) {
+						hoverInfo.classList.add("hoverInfo");
+						if (qCode == filteredGear[i].qCode) {
+							personName = filteredGear[i].propLabel;
+							personDateOfBrith = filteredGear[i].start;
+							PersonDescribsion = filteredGear[i].itemLabel;
+						}
+					}
 
-					// for (let i = 0; i < filteredEvents.length; i++) {
-					// 	hoverInfo.classList.add("hoverInfo");
-					// 	if (qCode == filteredEvents[i].qCode) {
-					// 		personName = filteredEvents[i].itemLabel;
-					// 		personDateOfBrith = filteredEvents[i].timeline_date;
-					// 		PersonDescribsion = filteredEvents[i].pLabel;
-					// 	}
-					// }
+					for (let i = 0; i < filteredEvents.length; i++) {
+						hoverInfo.classList.add("hoverInfo");
+						if (qCode == filteredEvents[i].qCode) {
+							personName = filteredEvents[i].itemLabel;
+							personDateOfBrith = filteredEvents[i].timeline_date;
+							PersonDescribsion = filteredEvents[i].pLabel;
+						}
+					}
 
 					
 					hoverInfo.innerHTML = `
