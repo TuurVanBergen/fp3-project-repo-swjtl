@@ -17,6 +17,7 @@ export default class List {
             return `<div class="box">
             <img src="${this.image}" alt="" />
             <h3>${this.name}</h3>
+            <p>${this.description}</p>
             <a href="objectInfo.html?qCode=${this.qCode}&category=${this.category}" id="button"">More</a>
             </div>`;
         }else{
