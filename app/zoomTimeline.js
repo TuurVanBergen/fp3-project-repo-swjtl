@@ -186,7 +186,7 @@ function placeBol() {
 			return;
 		}
 
-		bolColor = "#ce1644";
+		bolColor = "#ffcb91";
 		rowId = _4thRow;
 		
 		console.log("bolinput: " + bolInput);
