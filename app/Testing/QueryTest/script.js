@@ -3,13 +3,14 @@ import formatDate from "./../../Classes/formatDate.js";
 console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
 
-// getAllInfo(qCode);
-// getPersonDate("Q31755");
+// -----Display info on infopage ----------------
+displayInfoPage(await getAllInfo("Q10040"));
+// ----------------------------------------------
 
-// returns only dateofbirth and dateofdeath of person
-
+// returns only dateofdeath of person
 export async function getDeathDate(Qcode) {}
 
+// getPersonDate("Q31755");
 export async function getPersonDate(qCode) {
 	let personDates = {};
 	try {
@@ -278,7 +279,6 @@ export async function getTheatreInfo(qCode) {
 	}
 	console.log("ENDED");
 }
-console.log(await getAllInfo("Q20812"));
 
 export async function getAllInfo(qCode) {
 	console.log(`fetching from ${qCode}`);
@@ -314,19 +314,40 @@ export async function getAllInfo(qCode) {
 		console.error("Error fetching the file:", error);
 	}
 
-	for (let i in Object.keys(currentObject)) {
-		console.log(i);
-		let currentProperty;
-		console.log(currentObject);
-
-		console.log(currentObject.label);
-		currentProperty = Object.keys(currentObject)[i];
-		console.log(currentProperty);
-	}
-	console.log(Object.keys(currentObject));
 	return currentObject;
 }
+function displayInfoPage(currentObject) {
+	// logs/appends values based on what properties are present
+	for (let i in Object.keys(currentObject)) {
+		console.log(i);
 
+		let currentProperty = Object.keys(currentObject)[i];
+		console.log(currentProperty);
+		let currentValue = eval(`currentObject.${Object.keys(currentObject)[i]}`);
+
+		switch (currentProperty) {
+			case "img":
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty}</h3> <img src="${currentValue}" width="200px"  height="200px"></img><br>`;
+				break;
+			case "sourceUrl":
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty}<a href="${currentValue}"><h3>${currentValue}</h3></a></h3><br>`;
+				break;
+			case "wikiDataSource":
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty}<a href="${currentValue}"><h3>${currentValue}</h3></a></h3><br>`;
+				break;
+			default:
+				document.getElementById(
+					"section"
+				).innerHTML += `<h3>${currentProperty} : ${currentValue}</h3><br>`;
+		}
+	}
+}
 function setUrl(qCode) {
 	let url = `https://canonbase.eu/w/api.php?action=wbgetentities&ids=${qCode}&languages=en%7Cde%7Cfr&format=json&origin=*`;
 	return url;
@@ -336,15 +357,6 @@ async function fetchInfo(properties, data, qCode) {
 	let i = 0;
 	let temp = qCode;
 	let currentObject = {};
-
-	let imageTest = `imageTest : `;
-	let descriptionTest = `descriptionTest : `;
-	let LabelTest = `LabelTest : `;
-	let wikidataTest = `wikidataTest : `;
-	let FirstusedateTest = `FirstusedateTest : `;
-	let OpeningDateTest = `OpeningDateTest : `;
-	let DateofBirthTest = `DateofBirthTest : `;
-	let DateofDeathTest = `DateofDeathTest : `;
 
 	for (let property of properties) {
 		qCode = temp;
