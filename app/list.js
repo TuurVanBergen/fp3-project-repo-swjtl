@@ -3,7 +3,7 @@ let lists;
 let arr = [];
 let arrEquipment = [];   
 let sortedArr = [];
-let UrlJson = ['./JSON/Persons.json', './JSON/equipment.json', './JSON/events.json', './JSON/Theatres.json'];
+let UrlJson = ['./JSON/updatedPersons.json', './JSON/equipment.json', './JSON/events.json', './JSON/Theatres.json'];
 async function loadJSON(url) {
     try {
       const response = await fetch(url);
@@ -15,7 +15,7 @@ async function loadJSON(url) {
         console.log(url)
 
         if (jsonData[i].description && jsonData[i].dateOfBirth){
-            lists = new List(jsonData[i].name,jsonData[i].description,jsonData[i].qCode, jsonData[i].dateOfBirth, jsonData[i].dateOfDeath, "Person");
+            lists = new List(jsonData[i].name,jsonData[i].description,jsonData[i].qCode, jsonData[i].dateOfBirth, jsonData[i].dateOfDeath, "Person", jsonData[i].imageLink);
             arr.push(lists);
             sortedArr =arr;
         }
