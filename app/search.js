@@ -13,9 +13,6 @@ async function fetchPersons(url) {
 			throw new Error(`Failed to load JSON file: ${response.statusText}`);
 		}
 
-		// const searchData = await response.json();
-        // console.log(searchData);
-
         if(url == './JSON/finalPersons.json'){
             arrPersons = await response.json();
             console.log("Persons loaded", arrPersons);
@@ -63,11 +60,8 @@ async function fetchPersons(url) {
                     (item.timeline_date && item.timeline_date.includes(searchTerm))
                 ));
                 
-            // Filter the data based on the search term
 let filteredData = [...filteredEquipment, ...filteredEvents, ...filteredTheatres, ...filteredPersons];
 console.log(filteredData);
-            // Display the filtered results
-            // console.log(filteredData);
              displaySearchResults(filteredData);
         });
 
@@ -123,8 +117,6 @@ function displaySearchResults(results) {
             <p>${result.timeline_date.slice(0,4)}</p>
             <a id="button" href="./objectinfo.html?qCode=${qCode}&category=Event">More</a>`;
         }
-        // Customize the content to display as needed (e.g., name, description, etc.)
-
 
         searchResults.appendChild(resultItem);
     });
