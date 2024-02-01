@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         <h3 class="titleHover">${personName}</h3>
                         <p class="hoverYear">${personDateOfBrith}</p>
                         <p class="hoverType">${PersonDescribsion}</p>
-                        <a id="${qCode}" href="./objectinfo.html">More</a>
+                        <a id="${qCode}" href="./objectinfo.html?qCode=${qCode}&category=Person">More</a>
                     </div>
                 `;
 				}
