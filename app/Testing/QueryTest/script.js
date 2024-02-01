@@ -278,6 +278,7 @@ export async function getTheatreInfo(qCode) {
 	}
 	console.log("ENDED");
 }
+console.log(await getAllInfo("Q20812"));
 
 export async function getAllInfo(qCode) {
 	console.log(`fetching from ${qCode}`);
@@ -290,7 +291,7 @@ export async function getAllInfo(qCode) {
 		let description;
 
 		if (
-			eval(`data.entities.` + qCode + `.labels.en.descriptions`) === undefined
+			eval(`data.entities.` + qCode + `.descriptions.en.value`) === undefined
 		) {
 			label = eval(`data.entities.` + qCode + `.labels.en.value`);
 			description = undefined;
@@ -313,6 +314,16 @@ export async function getAllInfo(qCode) {
 		console.error("Error fetching the file:", error);
 	}
 
+	for (let i in Object.keys(currentObject)) {
+		console.log(i);
+		let currentProperty;
+		console.log(currentObject);
+
+		console.log(currentObject.label);
+		currentProperty = Object.keys(currentObject)[i];
+		console.log(currentProperty);
+	}
+	console.log(Object.keys(currentObject));
 	return currentObject;
 }
 
@@ -321,9 +332,20 @@ function setUrl(qCode) {
 	return url;
 }
 async function fetchInfo(properties, data, qCode) {
+	console.log("fetchinfo called");
 	let i = 0;
 	let temp = qCode;
 	let currentObject = {};
+
+	let imageTest = `imageTest : `;
+	let descriptionTest = `descriptionTest : `;
+	let LabelTest = `LabelTest : `;
+	let wikidataTest = `wikidataTest : `;
+	let FirstusedateTest = `FirstusedateTest : `;
+	let OpeningDateTest = `OpeningDateTest : `;
+	let DateofBirthTest = `DateofBirthTest : `;
+	let DateofDeathTest = `DateofDeathTest : `;
+
 	for (let property of properties) {
 		qCode = temp;
 		i++;
@@ -331,6 +353,7 @@ async function fetchInfo(properties, data, qCode) {
 		// adds properties to object;
 		if (property === "P2") {
 			// image
+			console.log("image");
 			let currentProperty =
 				`data.entities.` +
 				qCode +
@@ -348,6 +371,7 @@ async function fetchInfo(properties, data, qCode) {
 					`[0].mainsnak.datavalue.value`
 			)}`;
 		} else if (property === "P16") {
+			console.log("wikidata found");
 			// Wikidata source
 			let currentProperty =
 				`data.entities.` +
@@ -379,21 +403,25 @@ async function fetchInfo(properties, data, qCode) {
 
 			switch (property) {
 				case "P111":
+					console.log("First use date found");
 					// First use date
 					currentObject.firstUseDate = currentProperty;
 
 					break;
 				case "P102":
+					console.log("Opening Date found");
 					// Opening Date
 					currentObject.openingDate = currentProperty;
 
 					break;
 				case "P30":
+					console.log("Date of Birth found");
 					// Date of Birth
 					currentObject.dateOfBirth = currentProperty;
 
 					break;
 				case "P31":
+					console.log("Date of Death found");
 					// Date of Death
 					currentObject.dateOfDeath = currentProperty;
 
@@ -449,7 +477,6 @@ async function fetchInfo(properties, data, qCode) {
 			.then((data) => {
 				// console.log(`Appending ${qCode} statement to html `);
 				let pValue = eval(`data.entities.${qCode}.labels.en.value`);
-
 				if (property === "P11") {
 					//type of information
 					currentObject.typeOfInformation = pValue;
