@@ -4,13 +4,33 @@ console.log("Querytest");
 // `https://canonbase.eu/w/api.php?action=wbgetentities&ids=Q31216&languages=en%7Cde%7Cfr&format=json&origin=*`
 
 // -----Display info on infopage ----------------
-displayInfoPage(await getAllInfo("Q10040"));
+// displayInfoPage(await getAllInfo("Q10040"));
 // ----------------------------------------------
 
 // returns only dateofdeath of person
 export async function getDeathDate(Qcode) {}
 
 // getPersonDate("Q31755");
+let newList = [];
+removeDuplicates();
+async function removeDuplicates() {
+	await fetch("http://127.0.0.1:5502/app/JSON/finalPersons.json")
+		.then((response) => response.json())
+		.then((data) => {
+			console.log(data);
+			let prevQ = data[0].qCode;
+			let duplicateValues = [];
+			for (let i in data) {
+				if (prevQ === data[i].qCode) {
+					duplicateValues.push(data[i].qCode);
+				}
+				prevQ = data[i].qCode;
+			}
+			console.log(duplicateValues);
+			document.getElementById("text").innerHTML = `<p>${duplicateValues}</p>`;
+		})
+		.catch((error) => console.error("Error fetching the file:", error));
+}
 export async function getPersonDate(qCode) {
 	let personDates = {};
 	try {

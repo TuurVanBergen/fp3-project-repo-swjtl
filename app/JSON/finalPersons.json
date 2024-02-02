@@ -150,16 +150,6 @@
 		"dateOfDeath": "1983"
 	},
 	{
-		"name": "Clemens Holzmeister",
-		"qCode": "Q425",
-		"occupationLabel": "architect",
-		"countryLabel": "Austria",
-		"dateOfBirth": "1886",
-		"description": "Architekt, Bühnenbildner, Professor für Theaterbau",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Clemens Holzmeister (1886-1983) 1937 Otto Skall.jpg",
-		"dateOfDeath": "1983"
-	},
-	{
 		"name": "Eduard Prandl",
 		"qCode": "Q20838",
 		"occupationLabel": "architect",
@@ -3480,15 +3470,6 @@
 		"dateOfDeath": "2002"
 	},
 	{
-		"name": "Josef Svoboda",
-		"qCode": "Q91",
-		"occupationLabel": "architect",
-		"countryLabel": "Czech Republic",
-		"dateOfBirth": "1920",
-		"description": "czech scenographer who innovated stage technologies, especially lighting",
-		"dateOfDeath": "2002"
-	},
-	{
 		"name": "Josef Velflík",
 		"qCode": "Q21456",
 		"occupationLabel": "architect",
@@ -6412,16 +6393,6 @@
 		"dateOfDeath": "1898"
 	},
 	{
-		"name": "Charles Garnier",
-		"qCode": "Q531",
-		"occupationLabel": "architect",
-		"countryLabel": "France",
-		"dateOfBirth": "1825",
-		"description": "architect from France",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Charles Garnier by Nadar - Leniaud 2003 p142.jpg",
-		"dateOfDeath": "1898"
-	},
-	{
 		"name": "Charles Hector Malo",
 		"qCode": "Q21490",
 		"occupationLabel": "architect",
@@ -6777,16 +6748,6 @@
 		"description": "architect",
 		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Presumed portrait of Louis-Pierre Haudebourt by Ingres.jpg",
 		"dateOfDeath": "1849"
-	},
-	{
-		"name": "Hector Lefuel",
-		"qCode": "Q20439",
-		"occupationLabel": "architect",
-		"countryLabel": "France",
-		"dateOfBirth": "1810",
-		"description": "French architect",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Funeral monument bust of Hector Lefuel - FindAGrave amy7252 (adjusted).jpg",
-		"dateOfDeath": "1880"
 	},
 	{
 		"name": "Hector Lefuel",
@@ -9611,14 +9572,6 @@
 		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Andrea Palladio2.jpeg"
 	},
 	{
-		"name": "Andrea Palladio",
-		"qCode": "Q651",
-		"occupationLabel": "architect",
-		"countryLabel": "Italy",
-		"dateOfBirth": "1508",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Andrea Palladio2.jpeg"
-	},
-	{
 		"name": "Andrea Scala",
 		"qCode": "Q21069",
 		"occupationLabel": "architect",
@@ -10539,16 +10492,6 @@
 		"occupationLabel": "architect",
 		"countryLabel": "Italy",
 		"description": "architect"
-	},
-	{
-		"name": "Giacomo Torelli",
-		"qCode": "Q705",
-		"occupationLabel": "architect",
-		"countryLabel": "Italy",
-		"dateOfBirth": "1608",
-		"description": "Italian stage designer, engineer, and architect (1608-1678)",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Ritratto Giacomo Torelli.jpg",
-		"dateOfDeath": "1678"
 	},
 	{
 		"name": "Giacomo Torelli",
@@ -17509,13 +17452,6 @@
 		"description": "Author"
 	},
 	{
-		"name": "Chris Van Goethem",
-		"qCode": "Q843",
-		"occupationLabel": "author",
-		"countryLabel": "Belgium",
-		"description": "Author"
-	},
-	{
 		"name": "Christine Mobers",
 		"qCode": "Q1107",
 		"occupationLabel": "author",
@@ -18988,16 +18924,6 @@
 		"dateOfDeath": "1678"
 	},
 	{
-		"name": "Giacomo Torelli",
-		"qCode": "Q705",
-		"occupationLabel": "engineer",
-		"countryLabel": "Italy",
-		"dateOfBirth": "1608",
-		"description": "Italian stage designer, engineer, and architect (1608-1678)",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Ritratto Giacomo Torelli.jpg",
-		"dateOfDeath": "1678"
-	},
-	{
 		"name": "Guglielmo Marconi",
 		"qCode": "Q15383",
 		"occupationLabel": "engineer",
@@ -19016,13 +18942,6 @@
 		"description": "Italian inventor and engineer",
 		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Guglielmo Marconi posing.jpg",
 		"dateOfDeath": "1937"
-	},
-	{
-		"name": "Alexander von Salzmann",
-		"qCode": "Q22936",
-		"occupationLabel": "engineer",
-		"countryLabel": "Russia",
-		"dateOfBirth": "1874"
 	},
 	{
 		"name": "Alexander von Salzmann",
@@ -19076,16 +18995,6 @@
 		"dateOfBirth": "1911",
 		"description": "Lighting technologist and innovator in the UK 1930s-1970s. Developed innovative approaches to lighting control",
 		"dateOfDeath": "2001"
-	},
-	{
-		"name": "William Murdoch",
-		"qCode": "Q690",
-		"occupationLabel": "engineer",
-		"countryLabel": "United Kingdom",
-		"dateOfBirth": "1754",
-		"description": "Scottish engineer and inventor, known for first public lighting with gas.",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/William Murdoch (1754-1839).jpg",
-		"dateOfDeath": "1839"
 	},
 	{
 		"name": "William Murdoch",
@@ -19345,16 +19254,6 @@
 		"dateOfDeath": "1953"
 	},
 	{
-		"name": "Maude Adams",
-		"qCode": "Q23049",
-		"occupationLabel": "lighting designer",
-		"countryLabel": "USA",
-		"dateOfBirth": "1872",
-		"description": "Pioneer women of stage lighting",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Maude-Adams-The-Little-Minister.jpg",
-		"dateOfDeath": "1953"
-	},
-	{
 		"name": "Robert Edmond Jones",
 		"qCode": "Q29857",
 		"occupationLabel": "lighting designer",
@@ -19429,13 +19328,6 @@
 		"dateOfBirth": "1874"
 	},
 	{
-		"name": "Alexander von Salzmann",
-		"qCode": "Q22936",
-		"occupationLabel": "painter",
-		"countryLabel": "Russia",
-		"dateOfBirth": "1874"
-	},
-	{
 		"name": "Robert Fulton",
 		"qCode": "Q30623",
 		"occupationLabel": "painter",
@@ -19460,26 +19352,6 @@
 		"description": "dramatist, poet and writer of the Spanish Golden Age. Specially well-known for the genre of the \"auto-sacramental\"",
 		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Las Glorias Nacionales, 1852 \"D. Pedro Calderón de la Barca\" (4013195639).jpg",
 		"dateOfDeath": "1681"
-	},
-	{
-		"name": "Calderón",
-		"qCode": "Q442",
-		"occupationLabel": "playwright",
-		"countryLabel": "Spain",
-		"dateOfBirth": "1600",
-		"description": "dramatist, poet and writer of the Spanish Golden Age. Specially well-known for the genre of the \"auto-sacramental\"",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Las Glorias Nacionales, 1852 \"D. Pedro Calderón de la Barca\" (4013195639).jpg",
-		"dateOfDeath": "1681"
-	},
-	{
-		"name": "Lope de Vega",
-		"qCode": "Q444",
-		"occupationLabel": "playwright",
-		"countryLabel": "Spain",
-		"dateOfBirth": "1562",
-		"description": "Spanish playwright, poet and novelist, and one of the key figures in the Spanish Golden Age of Baroque literature.",
-		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Lope felix vega.jpg",
-		"dateOfDeath": "1635"
 	},
 	{
 		"name": "Lope de Vega",
@@ -19636,15 +19508,6 @@
 		"description": "scenographer and decorator",
 		"imageLink": "http://commons.wikimedia.org/wiki/Special:FilePath/Charles-Antoine Cambon.jpg",
 		"dateOfDeath": "1875"
-	},
-	{
-		"name": "Humanité Philastre",
-		"qCode": "Q392",
-		"occupationLabel": "scenographer",
-		"countryLabel": "France",
-		"dateOfBirth": "1794",
-		"description": "scenographer and decorator",
-		"dateOfDeath": "1848"
 	},
 	{
 		"name": "Humanité Philastre",
